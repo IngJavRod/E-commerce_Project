@@ -15,7 +15,7 @@ Se desarrolla una aplicación web que incluye tanto el **front-end** como el **b
 
 ---
 
-## 🧩 Funcionalidades requeridas
+## 🧩 Funcionalidades
 
 - ✅ Página de **Inicio** – Presentación de la aplicación
 - ✅ Página **Contáctenos**
