@@ -1,0 +1,282 @@
+/* ======= VARIABLES GLOBALES ======= */
+:root {
+    /* Colores */
+    --color-beige-paper: #f3f3f3;
+    --color-black: #000000;
+    --color-black-deep: #070707;
+    --color-gray-cool: #a0a0a0;
+
+    /* Fuentes */
+    --font-heading: 'Patrick Hand', cursive;
+    --font-body: 'Raleway', sans-serif;
+    --font-special: 'Rubik Beastly', cursive;
+    --font-caption: 'PT Serif Caption', serif;
+}
+
+/* ======= ESTILOS BASE ======= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-beige-paper);
+    background-image: url('http://www.transparenttextures.com/patterns/beige-paper.png');
+    background-repeat: repeat;
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+main {
+    padding-top: 120px; /* Compensar navbar fija */
+}
+
+/* ======= TIPOGRAFÍA ======= */
+h1{
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+h2{
+    font-family:  var(--font-body);
+    font-weight: 700;
+}
+h3{
+    font-family: var(--font-special);
+    font-weight: 400;
+}
+h4{
+    font-family: var(--font-special);
+    font-weight: 100;
+}
+
+p, li, span, a, footer, section, div {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+.rubik-style {
+    font-family: var(--font-special);
+    font-weight: 400;
+}
+
+.caption-style {
+    font-family: var(--font-caption);
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+    background-color: var(--color-beige-paper);
+    background-image: url('http://www.transparenttextures.com/patterns/beige-paper.png');
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand img {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+/* Offcanvas */
+.custom-barra-bg {
+    background-color: var(--color-beige-paper);
+    background-image: url('https://www.transparenttextures.com/patterns/beige-paper.png');
+    background-repeat: repeat;
+    color: var(--color-black);
+}
+
+/* ======= COMPONENTES ======= */
+/* Iconos circulares */
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+    color: var(--color-beige-paper);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.icon-circle i {
+    font-size: 1.2rem;
+}
+
+.icon-circle:hover {
+    background-color: #333;
+}
+
+/* ======= FOOTER ======= */
+footer {
+    background-color: var(--color-black-deep);
+    background-image: url("https://www.transparenttextures.com/patterns/dark-denim.png");
+    color: var(--color-gray-cool);
+    padding: 40px 20px;
+    margin-top: 1rem;
+}
+
+/* Contenedor principal */
+footer > div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Secciones del footer */
+.footer-section {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: var(--color-gray-cool);
+}
+
+/* Listas */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--color-gray-cool);
+}
+
+footer ul li a {
+    color: var(--color-gray-cool);
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+footer ul li a:hover {
+    color: var(--color-beige-paper);
+    text-decoration: underline;
+}
+
+/* Logo footer */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.logo-image-footer img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Texto inferior */
+.store-name {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--color-gray-cool);
+}
+
+/* Botones */
+footer button {
+    background-color: var(--color-gray-cool);
+    color: var(--color-black);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer button:hover {
+    background-color: var(--color-black);
+    color: var(--color-beige-paper);
+}
+
+/* Formulario - Boton*/
+/* Quitar bordes redondeados */
+.no-radius {
+    border-radius: 0 !important;
+    font-size: 1rem;
+    padding: 0.4rem 3rem;
+}
+
+/* Botón personalizado con gris */
+.btn-gray-cool {
+    background-color: var(--color-gray-cool);
+    color: var(--color-black);
+    border: 1px solid var(--color-gray-cool);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-gray-cool:hover {
+    background-color: var(--color-black);
+    color: var(--color-beige-paper);
+}
+
+
+/* ======= MEDIA QUERIES ======= */
+/* Tablet */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Footer */
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        align-items: center;
+    }
+
+    .footer-section p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-section ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .footer-section ul li {
+        padding: 0 1rem;
+    }
+
+    .contacto-section ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
