@@ -1,79 +1,78 @@
-
 /* Estilos del body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
 }
 
 /* Encabezado H1 */
 h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Caja de la descripción */
 .intro {
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  text-align: center;
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Contenedor slider */
 .slider-wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* Botones de navegación */
 .slide-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background: white;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease;
 }
 
 .slide-button:hover {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 .slide-button.prev {
-  left: 10px;
+    left: 10px;
 }
 
 .slide-button.next {
-  right: 10px;
+    right: 10px;
 }
 
 /* Contenedor de las tarjetas con scroll y padding para ver extremos */
 .container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 0 40px;            /* Padding para mostrar extremos */
-  scroll-padding: 40px;       /* Para que snap no corte tarjetas */
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;      /* Firefox */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 0 40px;            /* Padding para mostrar extremos */
+    scroll-padding: 40px;       /* Para que snap no corte tarjetas */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;      /* Firefox */
 }
 
 .container::-webkit-scrollbar {
@@ -82,89 +81,86 @@ h1 {
 
 /* Tarjetas */
 .card {
-  flex: 0 0 auto;
-  width: 250px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 20px;
-  scroll-snap-align: center;
-  transition: transform 0.2s;
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    scroll-snap-align: center;
+    transition: transform 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+    
 }
 
 /* Imagen en tarjeta */
 .card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 /* Nombre */
 .name {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
 }
 
 /* Rol */
 .role {
-  font-size: 16px;
-  color: #777;
+    font-size: 16px;
+    color: #777;
 }
-
 
 /* -------------- Para el efecto flip 3D -------------- */
 .card {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 320px;
-  perspective: 1000px;
-  scroll-snap-align: center;
-  cursor: pointer;
+    flex: 0 0 auto;
+    width: 250px;
+    height: 320px;
+    perspective: 1000px;
+    scroll-snap-align: center;
+    cursor: pointer;
 }
 
 .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
 
-  /* Asegura que ninguna cara se filtre */
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+    /* Asegura que ninguna cara se filtre */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
-
 
 .card.flipped .card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-
 
 /* Ambas caras */
 .card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  z-index: 1; /* Asegura que solo una cara se vea a la vez */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 1; /* Asegura que solo una cara se vea a la vez */
 }
 
 /* Parte frontal */
@@ -174,28 +170,27 @@ h1 {
 
 /* Parte trasera */
 .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: none; /* ← importante para que no se vea como sombra doble */
-  transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: none; /* ← importante para que no se vea como sombra doble */
+    transform: rotateY(180deg);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  z-index: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
 
-    font-size: 12px; /* o 11px si quieres aún más pequeño */
-  line-height: 1.3; /* para que no quede tan separado */
+        font-size: 12px; /* o 11px si quieres aún más pequeño */
+    line-height: 1.3; /* para que no quede tan separado */
 }
-
