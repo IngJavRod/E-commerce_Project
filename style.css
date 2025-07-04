@@ -1,4 +1,4 @@
-/* ======= VARIABLES GLOBALES ======= */
+/* ====== VARIABLES GLOBALES ====== */
 :root {
     /* Colores */
     --color-beige-paper: #f3f3f3;
@@ -13,7 +13,7 @@
     --font-caption: 'PT Serif Caption', serif;
 }
 
-/* ======= ESTILOS BASE ======= */
+/* ====== ESTILOS BASE ====== */
 html, body {
     height: 100%;
     margin: 0;
@@ -27,45 +27,28 @@ html, body {
 }
 
 main {
-    padding-top: 120px; /* Compensar navbar fija */
+    padding-top: 120px;
 }
 
-/* ======= TIPOGRAFÍA ======= */
-h1{
-    font-family: var(--font-heading);
-    font-weight: 700;
-}
-h2{
-    font-family:  var(--font-body);
-    font-weight: 700;
-}
-h3{
-    font-family: var(--font-special);
-    font-weight: 400;
-}
-h4{
-    font-family: var(--font-special);
-    font-weight: 100;
-}
+/* ====== TIPOGRAFÍA ====== */
+h1 { font-family: var(--font-heading); font-weight: 700; }
+h2 { font-family: var(--font-body); font-weight: 700; }
+h3 { font-family: var(--font-special); font-weight: 400; }
+h4 { font-family: var(--font-caption); font-weight: 700; }
 
 p, li, span, a, footer, section, div {
     font-family: var(--font-body);
     font-weight: 400;
 }
 
-.rubik-style {
-    font-family: var(--font-special);
-    font-weight: 400;
-}
+.rubik-style { font-family: var(--font-special); font-weight: 400; }
+.caption-style { font-family: var(--font-caption); }
 
-.caption-style {
-    font-family: var(--font-caption);
-}
-
-/* ======= NAVBAR ======= */
+/* ====== NAVBAR ====== */
 .navbar {
     background-color: var(--color-beige-paper);
     background-image: url('http://www.transparenttextures.com/patterns/beige-paper.png');
+    background-repeat: repeat;
     box-shadow: none;
     position: fixed;
     top: 0;
@@ -73,29 +56,36 @@ p, li, span, a, footer, section, div {
     z-index: 1000;
 }
 
-/* Logo */
 .navbar-brand img {
     height: 100px;
     margin-top: 10px;
     margin-bottom: -20px;
 }
 
-/* Botón hamburguesa */
 .navbar-toggler {
     border: none;
     background-color: transparent;
+    display: block;
+    z-index: 1100;
 }
 
-/* Offcanvas */
-.custom-barra-bg {
-    background-color: var(--color-beige-paper);
-    background-image: url('https://www.transparenttextures.com/patterns/beige-paper.png');
-    background-repeat: repeat;
-    color: var(--color-black);
+.custom-collapse {
+    width: auto;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 60px;
+    top: 35px;
 }
 
-/* ======= COMPONENTES ======= */
-/* Iconos circulares */
+.navbar-nav {
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 0.5rem;
+}
+
+/* ====== COMPONENTES ====== */
 .icon-circle {
     display: flex;
     justify-content: center;
@@ -117,7 +107,7 @@ p, li, span, a, footer, section, div {
     background-color: #333;
 }
 
-/* ======= FOOTER ======= */
+/* ====== FOOTER ====== */
 footer {
     background-color: var(--color-black-deep);
     background-image: url("https://www.transparenttextures.com/patterns/dark-denim.png");
@@ -126,7 +116,6 @@ footer {
     margin-top: 1rem;
 }
 
-/* Contenedor principal */
 footer > div {
     display: flex;
     justify-content: space-evenly;
@@ -135,7 +124,6 @@ footer > div {
     margin: auto;
 }
 
-/* Secciones del footer */
 .footer-section {
     margin: 1rem;
     display: flex;
@@ -150,7 +138,6 @@ footer > div {
     color: var(--color-gray-cool);
 }
 
-/* Listas */
 footer ul {
     list-style: none;
     padding: 0;
@@ -174,7 +161,6 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Logo footer */
 .logo-container {
     display: flex;
     justify-content: center;
@@ -189,7 +175,6 @@ footer ul li a:hover {
     display: block;
 }
 
-/* Texto inferior */
 .store-name {
     text-align: center;
     margin-top: 30px;
@@ -197,7 +182,7 @@ footer ul li a:hover {
     color: var(--color-gray-cool);
 }
 
-/* Botones */
+/* Botones en footer */
 footer button {
     background-color: var(--color-gray-cool);
     color: var(--color-black);
@@ -213,20 +198,23 @@ footer button:hover {
     color: var(--color-beige-paper);
 }
 
-/* Formulario - Boton*/
-/* Quitar bordes redondeados */
-.no-radius {
-    border-radius: 0 !important;
-    font-size: 1rem;
-    padding: 0.4rem 3rem;
+/* ====== NUEVOS ESTILOS PARA EL FORMULARIO ====== */
+
+/* Botones generales */
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Botón personalizado con gris */
+/* Botón personalizado gris */
 .btn-gray-cool {
     background-color: var(--color-gray-cool);
     color: var(--color-black);
-    border: 1px solid var(--color-gray-cool);
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-gray-cool:hover {
@@ -234,10 +222,41 @@ footer button:hover {
     color: var(--color-beige-paper);
 }
 
+/* Sin bordes redondeados (para input y botón) */
+.no-radius {
+    border-radius: 0 !important;
+}
 
-/* ======= MEDIA QUERIES ======= */
-/* Tablet */
+/* ====== MEDIA QUERIES ====== */
+
+/* NAVBAR Ajustes para pantallas grandes */
+@media (min-width: 993px) {
+    .navbar-toggler {
+        display: block !important;
+        pointer-events: none;
+    }
+
+    .custom-collapse {
+        display: flex !important;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .navbar-nav {
+        flex-direction: row !important;
+        gap: 1rem;
+        margin-left: 0.5rem;
+    }
+}
+
+/* NAVBAR y FOOTER en pantallas pequeñas */
 @media (max-width: 992px) {
+    .custom-collapse {
+        width: 100%;
+        flex-direction: column;
+        position: static;
+    }
+
     .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -245,9 +264,7 @@ footer button:hover {
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    /* Footer */
     footer > div {
         flex-direction: column;
         align-items: center;
@@ -280,3 +297,20 @@ footer button:hover {
         align-items: center;
     }
 }
+@media (max-width: 576px) {
+    form.d-flex.justify-content-center.flex-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-group {
+        max-width: 100% !important;
+        width: 100%;
+        flex-direction: column;
+    }
+    .input-group input,
+    .input-group button {
+        width: 100%;  /* o 100% si quieres */
+        margin: 0.3rem 0;
+    }
+}
+
