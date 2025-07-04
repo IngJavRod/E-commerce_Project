@@ -39,7 +39,7 @@ function createNavbar() {
             <div class="collapse custom-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" aria-current="page" href="../index.html">INICIO</a>
+                <a class="nav-link active rubik-style" aria-current="page" href="../pagina_principal.html">INICIO</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link active rubik-style" href="#">PRODUCTOS</a>
@@ -68,7 +68,7 @@ function createFooter() {
             <div class="footer-section">
                 <h4 class="p-0">Categorías</h4>
                 <ul class="">
-                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pagina_principal.html">Inicio</a></li>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Ofertas</a></li>
