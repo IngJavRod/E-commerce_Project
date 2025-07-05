@@ -9,30 +9,27 @@ function createNavbar() {
     const navbarContent = `
         <nav class="navbar">
             <div class="container-fluid d-flex align-items-center justify-content-between">
+                <!-- IZQUIERDA: Botón hamburguesa -->
+                <div class="navbar-left d-flex align-items-center" style="flex: 1;">
+                    <button class="navbar-toggler d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
 
-            <!-- Botón hamburguesa SIEMPRE visible -->
-            <button class="navbar-toggler d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- CENTRO: Logo -->
+                <div class="navbar-center text-center" style="flex: 1;">
+                    <a class="navbar-brand m-0" href="#">
+                    <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="100">
+                    </a>
+                </div>
 
-            <!-- Logo centrado -->
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="100">
-            </a>
-
-            <!-- Iconos a la derecha -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="icon-circle me-2">
-                <i class="bi bi-cart3"></i>
-                </a>
-                <a href="#" class="icon-circle me-2">
-                <i class="bi bi-heart"></i>
-                </a>
-                <a href="#" class="icon-circle me-3">
-                <i class="bi bi-person"></i>
-                </a>
-            </div>
+                <!-- DERECHA: Iconos -->
+                <div class="navbar-right d-flex justify-content-end align-items-center" style="flex: 1;">
+                    <a href="#" class="icon-circle me-2"><i class="bi bi-cart3"></i></a>
+                    <a href="#" class="icon-circle me-2"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="icon-circle me-3"><i class="bi bi-person"></i></a>
+                </div>
             </div>
 
             <!-- Menú colapsable alineado a la izquierda -->
