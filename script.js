@@ -18,9 +18,9 @@ function createNavbar() {
                 </div>
 
                 <!-- CENTRO: Logo -->
-                <div class="navbar-center text-center" style="flex: 1;">
-                    <a class="navbar-brand m-0" href="#">
-                    <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="100">
+                <div class="navbar-center d-flex justify-content-center align-items-center flex-grow-1" style="height: 100px;">
+                    <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="#" style="line-height: 0;">
+                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
                     </a>
                 </div>
 
