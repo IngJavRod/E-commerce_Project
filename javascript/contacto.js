@@ -17,8 +17,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
     return;
   }
 
-  if (!/^[0-9]{7,15}$/.test(telefono)) {
-    showModal("El teléfono debe tener solo números (7 a 15 dígitos).");
+  if (!/^[0-9]{7,10}$/.test(telefono)) {
+    showModal("El teléfono debe tener solo números (7 a 10 dígitos).");
     return;
   }
 
