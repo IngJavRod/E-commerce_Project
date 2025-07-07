@@ -39,3 +39,12 @@ nextBtn.addEventListener("click", () => {
 
 // Inicializar botones en el estado correcto
 updateButtons();
+
+// --- Código para flip al click ---
+
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+    });
+});
+
