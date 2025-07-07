@@ -42,7 +42,7 @@ function createNavbar() {
                 <a class="nav-link active rubik-style" href="#">PRODUCTOS</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" href="#">ACERCA DE</a>
+                <a class="nav-link active rubik-style" href="/html/sobre_nosotros.html">ACERCA DE</a>
                 </li>
             </ul>
             </div>
@@ -76,7 +76,7 @@ function createFooter() {
                 <h4>General</h4>
                 <ul class="list-unstyled">
                     <li><a href="/html/sobre_nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="/html/contactanos.html">Contáctanos</a></li>
+                    <li><a href="/html/contacto.html">Contáctanos</a></li>
                     <li><a href="#">Términos y condiciones</a></li>
                     <li><a href="#">Política de privacidad</a></li>
                 </ul>
