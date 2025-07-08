@@ -90,7 +90,7 @@ function createFooter() {
                 </ul>
             </div>
             <div class="footer-section">
-                <p class="rubik-style">Redes sociales</p>
+                <h4>Redes sociales</h4>
                 <ul class="list-unstyled">
                     <li>
                         <a href="https://www.facebook.com/thekingtigerMO" target="_blank" rel="noopener noreferrer"
