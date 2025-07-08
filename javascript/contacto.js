@@ -23,7 +23,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 
   // FORMSPREE - Aquí colocas tu endpoint de Formspree
-  const formspreeURL = "https://formspree.io/f/tu-endpoint"; // <-- cámbialo
+  const formspreeURL = "https://formspree.io/f/mjkrqyol"; // <-- cámbialo
 
   try {
     const response = await fetch(formspreeURL, {
