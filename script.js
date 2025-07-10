@@ -44,6 +44,9 @@ function createNavbar() {
                 <li class="nav-item">
                 <a class="nav-link active rubik-style" href="/html/sobre_nosotros.html">ACERCA DE</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link active rubik-style" href="/html/contacto.html">CONTÁCTANOS</a>
+                </li>
             </ul>
             </div>
         </nav>
