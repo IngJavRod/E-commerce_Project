@@ -33,7 +33,7 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 2000,
-        categoria: "Pantalon"
+        categoria: "playeras"
     },
     { 
         producto: 'Player 1',
@@ -45,7 +45,7 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 1000,
-        categoria: "Pantalon"
+        categoria: "Pantalones"
     },
     {
         producto: 'Player 2',
@@ -57,7 +57,7 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 9000,
-        categoria: "pantalon"
+        categoria: "Pantalones"
     },
     {
         producto: 'Player 3',
@@ -69,7 +69,7 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 2000,
-        categoria: "pantalon"
+        categoria: "Pantalones"
     },
     { 
         producto: 'Player 1',
@@ -81,7 +81,7 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 1000,
-        categoria: "chamarra"
+        categoria: "Chamarras"
     },
     {
         producto: 'Player 2',
@@ -93,10 +93,10 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 9000,
-        categoria: "chamarra"
+        categoria: "Chamarras"
     },
     {
-        producto: 'Player 3',
+        producto: 'Chamarra Lujo',
         imagenes:[
         "https://i.postimg.cc/B6BDwqhh/Playera3.png",
         "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
@@ -105,6 +105,6 @@ export const productos = [
         descripcion: "Playera buena calidad",
         tallas: ["S", "M", "L"],
         precio: 2000,
-        categoria: "chamarra"
+        categoria: "Chamarras"
     }
 ]
