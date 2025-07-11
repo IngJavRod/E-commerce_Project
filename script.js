@@ -39,13 +39,10 @@ function createNavbar() {
                 <a class="nav-link active rubik-style" aria-current="page" href="../pagina_principal.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" href="#">PRODUCTOS</a>
+                <a class="nav-link active rubik-style" href="/html/productos.html">PRODUCTOS</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link active rubik-style" href="/html/sobre_nosotros.html">ACERCA DE</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active rubik-style" href="/html/contacto.html">CONTÁCTANOS</a>
                 </li>
             </ul>
             </div>
@@ -69,7 +66,7 @@ function createFooter() {
                 <h4 class="p-0">Categorías</h4>
                 <ul class="">
                     <li><a href="../pagina_principal.html">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="/html/productos.html">Productos</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Descuentos</a></li>
