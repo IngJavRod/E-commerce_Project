@@ -1,5 +1,6 @@
 export const productos = [
     { 
+        id: 1,
         producto: 'Player 1',
         imagenes:[
             "https://i.postimg.cc/qRTyLtGh/Playera1.png",
@@ -12,6 +13,7 @@ export const productos = [
         categoria: "playeras"
     },
     {
+        id: 2,
         producto: 'Player 2',
         imagenes:[
         "https://i.postimg.cc/4y4cDrqX/Playera2.png",
@@ -24,6 +26,7 @@ export const productos = [
         categoria: "playeras"
     },
     {
+        id: 3,
         producto: 'Player 3',
         imagenes:[
         "https://i.postimg.cc/B6BDwqhh/Playera3.png",
@@ -36,6 +39,7 @@ export const productos = [
         categoria: "playeras"
     },
     { 
+        id: 4,
         producto: 'Player 1',
         imagenes:[
             "https://i.postimg.cc/qRTyLtGh/Playera1.png",
@@ -48,6 +52,7 @@ export const productos = [
         categoria: "Pantalones"
     },
     {
+        id: 5,
         producto: 'Player 2',
         imagenes:[
         "https://i.postimg.cc/4y4cDrqX/Playera2.png",
@@ -60,6 +65,7 @@ export const productos = [
         categoria: "Pantalones"
     },
     {
+        id: 6,
         producto: 'Player 3',
         imagenes:[
         "https://i.postimg.cc/B6BDwqhh/Playera3.png",
@@ -72,6 +78,7 @@ export const productos = [
         categoria: "Pantalones"
     },
     { 
+        id: 7,
         producto: 'Player 1',
         imagenes:[
             "https://i.postimg.cc/qRTyLtGh/Playera1.png",
@@ -84,6 +91,7 @@ export const productos = [
         categoria: "Chamarras"
     },
     {
+        id: 8,
         producto: 'Player 2',
         imagenes:[
         "https://i.postimg.cc/4y4cDrqX/Playera2.png",
@@ -96,6 +104,7 @@ export const productos = [
         categoria: "Chamarras"
     },
     {
+        id: 9,
         producto: 'Chamarra Lujo',
         imagenes:[
         "https://i.postimg.cc/B6BDwqhh/Playera3.png",

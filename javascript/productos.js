@@ -37,7 +37,19 @@ function aplicarEfectosHover() {
         });
     });
 }
+//Funcion para guardar id
+function agregarEventoClic() {
+    document.querySelectorAll('.producto-link').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
 
+            const id = parseInt(link.getAttribute('data-id'));
+            localStorage.setItem("productoSeleccionado", id);
+
+            window.location.href = "../html/producto.html";
+        });
+    });
+}
 // Función para renderizar productos agrupados por categoría
 function renderizarProductos(productosLista) {
     if (productosLista.length === 0) {
@@ -64,7 +76,7 @@ function renderizarProductos(productosLista) {
 
             return `
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                    <a href="/producto.html?id=${producto.id}" class="text-decoration-none text-dark d-block h-100">
+                    <a href="#" class="text-decoration-none text-dark d-block h-100 producto-link" data-id="${producto.id}">
                         <div class="card h-100" data-imagenes='${imagenesData}' style="width: 100%;">
                             <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.producto}">
                             <div class="card-body">
@@ -89,6 +101,7 @@ function renderizarProductos(productosLista) {
     }).join('');
 
     aplicarEfectosHover();
+    agregarEventoClic(); // Agregar eventos de clic después de renderizar
 }
 
 // Evento para buscar productos
