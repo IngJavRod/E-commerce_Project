@@ -11,6 +11,7 @@
     --font-body: 'Raleway', sans-serif;
     --font-special: 'Rubik Beastly', cursive;
     --font-caption: 'PT Serif Caption', serif;
+    --font-Beatrice: 'Beatrice Deck Trial';
 }
 
 /* ====== ESTILOS BASE ====== */
@@ -27,7 +28,8 @@ html, body {
 }
 
 main {
-    padding-top: 120px;
+
+    margin-top: 120px;
 }
 
 /* ====== TIPOGRAFÍA ====== */
@@ -37,7 +39,7 @@ h3 { font-family: var(--font-special); font-weight: 400; }
 h4 { font-family: var(--font-caption); font-weight: 700; }
 
 p, li, span, a, footer, section, div {
-    font-family: var(--font-body);
+    font-family: var(--font-Beatrice);
     font-weight: 400;
 }
 
@@ -199,17 +201,6 @@ footer button:hover {
 }
 
 /* ====== NUEVOS ESTILOS PARA EL FORMULARIO ====== */
-
-/* Botones generales */
-.btn {
-    border: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-family: var(--font-body);
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 /* Botón personalizado gris */
 .btn-gray-cool {
