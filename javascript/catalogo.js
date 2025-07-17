@@ -66,7 +66,7 @@ export const productos = [
     },
     {
         id: 6,
-        producto: 'The King Tiger black joggers',
+        producto: 'The King Tiger joggers in Black',
         imagenes:[
         "https://i.postimg.cc/7CKKJBK1/15.jpg",
         "https://i.postimg.cc/TLhCVrsz/15-1.jpg",
