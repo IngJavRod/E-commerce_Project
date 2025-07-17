@@ -27,15 +27,15 @@ export const productos = [
     },
     {
         id: 3,
-        producto: 'Player 3',
+        producto: 'Playera "aventuras de una mosca"',
         imagenes:[
-        "https://i.postimg.cc/B6BDwqhh/Playera3.png",
-        "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-        "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+        "https://i.postimg.cc/1X6qWB7n/2.jpg",
+        "https://i.postimg.cc/SsH973db/2-3.jpg",
+        "https://i.postimg.cc/L4ZL6449/2-1.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Playera 100% algodón, manga corta",
         tallas: ["S", "M", "L"],
-        precio: 2000,
+        precio: 300,
         categoria: "playeras"
     },
     { 
