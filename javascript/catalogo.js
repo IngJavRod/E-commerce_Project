@@ -105,15 +105,28 @@ export const productos = [
     },
     {
         id: 9,
-        producto: 'Chamarra Lujo',
+        producto: 'Sudadera esqueleto',
         imagenes:[
-        "https://i.postimg.cc/B6BDwqhh/Playera3.png",
-        "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-        "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+        "https://i.postimg.cc/5yq0Q7Fw/sudadera-esqueleto-uva-1.jpg",
+        "https://i.postimg.cc/qqdqRVgJ/sudadera-esqueleto-uva-2.jpg",
+        "https://i.postimg.cc/Ss9jkNS1/sudadera-esqueleto-uva-3.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Sudadera color uva con diseño de esqueleto humano con técnica de decoloración de tela, 100% algodón. ¡Muy chida!",
         tallas: ["S", "M", "L"],
-        precio: 2000,
+        precio: 700,
+        categoria: "Chamarras"
+    },
+    {
+        id: 10,
+        producto: 'Sudadera van Gogh',
+        imagenes:[
+        "https://i.postimg.cc/sxfmb8yX/9-2.jpg",
+        "https://i.postimg.cc/W3wSWVBC/9.jpg",
+        "https://i.postimg.cc/NFNDt4fx/9-1.jpg",
+        ],
+        descripcion: "Sudadera cómoda y fresca color rojo con capucha",
+        tallas: ["S", "M", "L"],
+        precio: 700,
         categoria: "Chamarras"
     }
 ]
