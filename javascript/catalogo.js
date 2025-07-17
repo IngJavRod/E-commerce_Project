@@ -79,16 +79,16 @@ export const productos = [
     },
     { 
         id: 7,
-        producto: 'Player 1',
+        producto: 'Playera negra Billie Ellish',
         imagenes:[
-            "https://i.postimg.cc/qRTyLtGh/Playera1.png",
-        "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-        "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+        "https://i.postimg.cc/JnL8YpLs/billie-elish-3.jpg",
+        "https://i.postimg.cc/K8CxBZpr/billie-elish-1.jpg",
+        "https://i.postimg.cc/DzsFcttV/billie-elish-2.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Playera buena calidad, manga corta",
         tallas: ["S", "M", "L"],
-        precio: 1000,
-        categoria: "Chamarras"
+        precio: 400,
+        categoria: "playeras"
     },
     {
         id: 8,
