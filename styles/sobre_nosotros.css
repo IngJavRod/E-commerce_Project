@@ -1,16 +1,16 @@
 /* Estilos del body */
-body {
+/* body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f3f3f3;
     margin: 0;
     padding: 20px;
-}
+} */
 
 /* Encabezado H1 */
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 /* Caja de la descripción */
@@ -69,8 +69,8 @@ h1 {
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;
-    padding: 0 40px;            /* Padding para mostrar extremos */
-    scroll-padding: 40px;       /* Para que snap no corte tarjetas */
+    padding: 10 40px;            /* Padding para mostrar extremos */
+    scroll-padding: 60px;       /* Para que snap no corte tarjetas */
     scroll-snap-type: x mandatory;
     scrollbar-width: none;      /* Firefox */
 }
@@ -79,43 +79,55 @@ h1 {
   display: none;              /* Chrome, Safari, Opera */
 }
 
+#card-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px 0;           /* Espacio arriba y abajo */
+    scroll-snap-type: x mandatory;
+}
+
 /* Tarjetas */
 .card {
     flex: 0 0 auto;
     width: 250px;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #a0a0a0;
+    background-image: url('http://www.transparenttextures.com/patterns/beige-paper.png');
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     scroll-snap-align: center;
     transition: transform 0.2s;
 }
 
 .card:hover {
-    
+    transform: scale(1.05);
 }
+
 
 /* Imagen en tarjeta */
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    box-shadow: 4px 4px 6px rgba(1,1,1,0.4);
     object-fit: cover;
     margin-bottom: 15px;
 }
 
 /* Nombre */
 .name {
+    font-family: 'PT Serif Caption', serif;
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #1e1e1e;
 }
 
 /* Rol */
 .role {
     font-size: 16px;
-    color: #777;
+    color: #464545;
 }
 
 /* -------------- Para el efecto flip 3D -------------- */
@@ -181,7 +193,6 @@ h1 {
     background-color: #fff;
     box-shadow: none; /* ← importante para que no se vea como sombra doble */
     transform: rotateY(180deg);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,6 +202,6 @@ h1 {
     -webkit-backface-visibility: hidden;
     z-index: 1;
 
-        font-size: 12px; /* o 11px si quieres aún más pequeño */
+        font-size: 11px; /* o 11px si quieres aún más pequeño */
     line-height: 1.3; /* para que no quede tan separado */
 }
