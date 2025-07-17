@@ -40,15 +40,15 @@ export const productos = [
     },
     { 
         id: 4,
-        producto: 'Player 1',
+        producto: 'Jogger Cargo Negro',
         imagenes:[
-            "https://i.postimg.cc/qRTyLtGh/Playera1.png",
-        "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-        "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+            "https://i.postimg.cc/BbvYf0vm/11.jpg",
+        "https://i.postimg.cc/5tMsNv0Y/11-1.jpg",
+        "https://i.postimg.cc/4yM5CHq3/11-2.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Pantalon estilo jogger buena calidad",
         tallas: ["S", "M", "L"],
-        precio: 1000,
+        precio: 450,
         categoria: "Pantalones"
     },
     {
