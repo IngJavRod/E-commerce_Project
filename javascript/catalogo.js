@@ -53,15 +53,15 @@ export const productos = [
     },
     {
         id: 5,
-        producto: 'Player 2',
+        producto: 'Pantalon Militar',
         imagenes:[
-        "https://i.postimg.cc/4y4cDrqX/Playera2.png",
-        "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-        "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+        "https://i.postimg.cc/Nj7FDDXw/16-pantalon-negro.jpg",
+        "https://i.postimg.cc/28WVbr8y/16-2-pantalon-negro.jpg",
+        "https://i.postimg.cc/8zVsL9jH/16-3-pantalon-negro.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Pantalon estampado militar",
         tallas: ["S", "M", "L"],
-        precio: 9000,
+        precio: 500,
         categoria: "Pantalones"
     },
     {
