@@ -92,15 +92,15 @@ export const productos = [
     },
     {
         id: 8,
-        producto: 'Player 2',
-        imagenes: [
-            "https://i.postimg.cc/4y4cDrqX/Playera2.png",
-            "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
-            "https://i.postimg.cc/B6mkD1Ws/480730965-944112604499394-1496808190388782122-n.jpg",
+        producto: 'Sudadera con capucha',
+        imagenes:[
+        "https://i.postimg.cc/ZqGMRrDb/8.jpg",
+        "https://i.postimg.cc/XJ9DypTw/8-1.jpg",
+        "https://i.postimg.cc/gjdtyGW1/8-2.jpg",
         ],
-        descripcion: "Playera buena calidad",
+        descripcion: "Sudadera con capucha negra con logo, 100% algodón",
         tallas: ["S", "M", "L"],
-        precio: 9000,
+        precio: 600,
         categoria: "Chamarras"
     },
     {
