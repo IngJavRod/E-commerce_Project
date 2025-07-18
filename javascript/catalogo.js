@@ -10,11 +10,11 @@ export const productos = [
         descripcion: "Sudadera color negra con diseño de esqueleto humano con técnica de decoloración de tela, 100% algodón. ¡Muy chida!",
         tallas: ["S", "M", "L"],
         precio: 1200,
-        categoria: "Chamarras"
+        categoria: "Sudaderas"
     },
     {
         id: 2,
-        producto: 'Player2',
+        producto: 'Playera',
         imagenes: [
             "https://i.postimg.cc/4y4cDrqX/Playera2.png",
             "https://i.postimg.cc/yd12kybv/476597354-938049468439041-8383495441410287182-n.jpg",
@@ -101,7 +101,7 @@ export const productos = [
         descripcion: "Sudadera con capucha negra con logo, 100% algodón",
         tallas: ["S", "M", "L"],
         precio: 600,
-        categoria: "Chamarras"
+        categoria: "Sudaderas"
     },
     {
         id: 9,
@@ -114,7 +114,7 @@ export const productos = [
         descripcion: "Sudadera color uva con diseño de esqueleto humano con técnica de decoloración de tela, 100% algodón. ¡Muy chida!",
         tallas: ["S", "M", "L"],
         precio: 700,
-        categoria: "Chamarras"
+        categoria: "Sudaderas"
     },
     {
         id: 10,
@@ -127,6 +127,6 @@ export const productos = [
         descripcion: "Sudadera cómoda y fresca color rojo con capucha",
         tallas: ["S", "M", "L"],
         precio: 700,
-        categoria: "Chamarras"
+        categoria: "Sudaderas"
     }
 ]
