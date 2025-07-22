@@ -31,28 +31,28 @@
 					<form id="productoForm">
 						<div class="mb-3">
 							<label for="nombreProducto" class="form-label">Nombre del producto:</label>
-							<input type="text" class="form-control" id="nombreProducto" name="nombre" required />
+							<input type="text" class="form-control" id="nombreProducto" name="nombre"  />
 						</div>
 						<div class="mb-3">
 							<label for="imagenesProducto" class="form-label">URL de las imagenes (Separados por comas):</label>
-							<input type="text" class="form-control" id="imagenesProducto" name="imagenes" required />
+							<input type="text" class="form-control" id="imagenesProducto" name="imagenes"  />
 						</div>
 						<div class="mb-3">
 							<label for="descripcionProducto" class="form-label">Descripción</label>
 							<textarea type="text" class="form-control" id="descripcionProducto" name="descripcion"
-								required></textarea>
+								></textarea>
 						</div>
 						<div class="mb-3">
 							<label for="tallasProducto" class="form-label">Tallas Disponibles (S, M ,L, etc. separadas por coma):
 							</label>
-							<input type="text" class="form-control" id="tallasProducto" name="tallas" required />
+							<input type="text" class="form-control" id="tallasProducto" name="tallas"  />
 						</div>
 						<div class="mb-3">
 							<label for="precioProducto" class="form-label">Precio del Producto (MXN):</label>
-							<input type="number" class="form-control" id="precioProducto" name="precio" required />
+							<input type="number" class="form-control" id="precioProducto" name="precio"  />
 						</div>
 						<div class="mb-3">
-							<label class="form-label">Categorías:</label><br>
+							<label class="form-label" id="categorias">Categorías:</label><br>
 							<div class="form-check form-check-inline">
 								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones" id="catPlayeras">
 								<label class="form-check-label" for="catPlayeras">Playeras</label>
@@ -76,6 +76,7 @@
 							</button>
 						</div>
 					</form>
+					<div id="alertas" class="mt-3"></div>
 				</div>
 
 				<!-- Modal -->
@@ -100,6 +101,7 @@
 		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
 	</script>
 	<script src="/javascript/contacto.js"></script>
+	<script src="/javascript/validacion_form.js"></script>
 	<!-- Script externo -->
 	<script src="../script.js"></script>
 </body>
