@@ -37,6 +37,7 @@ function aplicarEfectosHover() {
         });
     });
 }
+
 //Funcion para guardar id
 function agregarEventoClic() {
     document.querySelectorAll('.producto-link').forEach(link => {
