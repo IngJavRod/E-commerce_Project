@@ -4,15 +4,17 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
     const nombre = document.getElementById('nombreProducto').value.trim();
     const tallas = document.getElementById('tallasProducto').value.trim();
     const categoriasCheckbox = document.querySelectorAll('input[name="categoria"]');
-    const algunoSeleccionado = Array.from(categoriasCheckbox).some(checkbox => checkbox.checked);
     const precio = document.getElementById('precioProducto').value.trim();
     const descripcion = document.getElementById('descripcionProducto').value.trim();
     const url = document.getElementById('imagenesProducto').value.trim();
 
+    const categoriasSeleccionadas = Array.from(categoriasCheckbox)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
     let errores = [];
 
-
-    if (!algunoSeleccionado) {
+    if (categoriasSeleccionadas.length === 0) {
         errores.push("Debes seleccionar al menos una categoría.");
     }
     if (nombre === '') errores.push("El nombre es obligatorio.");
@@ -24,8 +26,25 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
     mostrarErrores(errores);
 
     if (errores.length === 0) {
-        alert("¡Formulario válido!");
-        // Aquí podrías enviar los datos a un servidor, por ejemplo con fetch()
+        // Objeto JSON
+        const producto = {
+            nombre,
+            imagenes: url.split(',').map(img => img.trim()),
+            descripcion,
+            tallas: tallas.split(',').map(talla => talla.trim()),
+            precio: Number(precio),
+            categorias: categoriasSeleccionadas
+        };
+
+        // Mostrar en consola 
+        console.log("Producto creado:", JSON.stringify(producto, null, 2));
+
+        //Mostrar mensaje en el modal
+        document.getElementById("modalMessage").innerText = "Producto guardado exitosamente.";
+        new bootstrap.Modal(document.getElementById("responseModal")).show();
+
+        // Opcional: limpiar el formulario
+        document.getElementById("productoForm").reset();
     }
 });
 
@@ -37,11 +56,11 @@ function mostrarErrores(errores) {
         const alerta = document.createElement('div');
         alerta.className = 'alert alert-danger';
         alerta.innerHTML = `
-      <strong>¡Errores encontrados!</strong>
-      <ul>
-        ${errores.map(error => `<li>${error}</li>`).join('')}
-      </ul>
-    `;
+        <strong>¡Errores encontrados!</strong>
+        <ul>
+            ${errores.map(error => `<li>${error}</li>`).join('')}
+        </ul>
+      `;
         contenedor.appendChild(alerta);
     }
 }
