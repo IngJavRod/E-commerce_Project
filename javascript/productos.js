@@ -4,6 +4,33 @@ const contenedor = document.getElementById("contenedor-productos");
 const formBusqueda = document.getElementById("form-busqueda");
 const inputBusqueda = document.getElementById("busqueda-input");
 
+
+document.getElementById('productoForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que se recargue la página
+
+    const form = e.target;
+
+    // Creamos el objeto JavaScript a partir del formulario
+    const datos = {
+        nombreProducto: form.nombreProducto.value,
+        imagenesProducto: form.imagenesProducto.value,
+        descripcionProducto: form.descripcionProducto.value,
+        tallasProducto: form.tallasProducto.value,
+        precioProducto: form.precioProducto.value,
+        catPlayeras: form.catPlayeras.value,
+        catPantalones: form.catPantalones.value,
+        catSudaderas: form.catSudaderas.value,
+        catAccesorios: form.catAccesorios.value
+    };
+
+    // Lo convertimos a JSON
+    const json = JSON.stringify(datos);
+
+    console.log("JSON generado:", json);
+});
+
+
+
 // Función para aplicar efectos de hover e imagen dinámica
 function aplicarEfectosHover() {
     document.querySelectorAll('.card').forEach(card => {
