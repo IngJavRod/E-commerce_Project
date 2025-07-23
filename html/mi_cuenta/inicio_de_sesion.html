@@ -32,7 +32,44 @@
                 style="border: 2px solid #ccc; padding: 20px; max-width: 600px; margin: 0 auto;">
 
                 <h1 class="caption-style mb-4" style="font-weight: 100; text-align: start;">INICIAR SESION</h1>
+                <!-- Form con sangría lateral -->
+                <form id="contactForm" style="max-width: 500px; margin: 0 auto; text-align: center;">
 
+                    <!-- Correo -->
+                    <div class="mb-4" style="text-align: left;">
+                        <label for="correo" class="form-label no-radius">Correo</label>
+                        <input type="email" class="form-control no-radius" id="correo" name="correo" placeholder="Correo"
+                            required style="background: transparent; border: 1px solid #ccc; width: 100%;">
+                    </div>
+
+                    <!-- Contraseña + Olvidé mi contraseña -->
+                    <div class="mb-4" style="text-align: left;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="Contraseña" class="form-label mb-0">Contraseña</label>
+                            <!-- Mismo color que el texto normal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal"
+                            style="font-size: 0.875rem; text-decoration: none; color: inherit;">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <input type="password" class="form-control no-radius" id="Contraseña" name="Contraseña" placeholder="Contraseña"
+                            required style="background: transparent; border: 1px solid #ccc; width: 100%;">
+                    </div>
+
+                    <!-- Botón iniciar sesión centrado -->
+                    <button type="submit" class="btn btn-gray-cool" 
+                            style="display: block; width: 60%; margin: 10px auto;">INICIAR SESIÓN</button>
+
+                    <!-- Línea con "or" -->
+                    <div style="display: flex; align-items: center; text-align: center; margin: 10px 0;">
+                        <hr style="flex: 1; border: 1px solid #000000;">
+                        <span style="margin: 0 10px;">OR</span>
+                        <hr style="flex: 1; border: 1px solid #000000;">
+                    </div>
+
+                    <!-- Botón crear cuenta centrado -->
+                    <button type="button" class="btn btn-gray-cool" 
+                            style="display: block; width: 60%; margin: 10px auto;"
+                            data-bs-toggle="modal" data-bs-target="#registerModal">CREAR UNA CUENTA</button>
+                </form>
                 
             </div>
         </div>
