@@ -25,55 +25,42 @@
     <main class="container py-4">
         <div class="row align-items-center">
             <div class="col-12 col-md-4 mb-3 text-center">
-                <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" 
-                    alt="" style="max-width: 100%; height: auto;">
+                <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo" class="img-fluid">
             </div>
-            <div class="col-12 col-md-8 no-radius" 
-                style="border: 2px solid #ccc; padding: 20px; max-width: 600px; margin: 0 auto;">
+            <div class="col-12 col-md-8 login-box">
+                <h1 class="caption-style mb-4">INICIAR SESION</h1>
 
-                <h1 class="caption-style mb-4" style="font-weight: 100; text-align: start;">INICIAR SESION</h1>
-                <!-- Form con sangría lateral -->
-                <form id="contactForm" style="max-width: 500px; margin: 0 auto; text-align: center;">
+                <form id="contactForm" class="login-form">
 
-                    <!-- Correo -->
-                    <div class="mb-4" style="text-align: left;">
-                        <label for="correo" class="form-label no-radius">Correo</label>
-                        <input type="email" class="form-control no-radius" id="correo" name="correo" placeholder="Correo"
-                            required style="background: transparent; border: 1px solid #ccc; width: 100%;">
+                    <div class="mb-4 text-start">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo">
                     </div>
 
-                    <!-- Contraseña + Olvidé mi contraseña -->
-                    <div class="mb-4" style="text-align: left;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="mb-4 text-start">
+                        <div class="d-flex justify-content-between align-items-center">
                             <label for="Contraseña" class="form-label mb-0">Contraseña</label>
-                            <!-- Mismo color que el texto normal -->
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal"
-                            style="font-size: 0.875rem; text-decoration: none; color: inherit;">¿Olvidaste tu contraseña?</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" class="forgot-link">
+                                ¿Olvidaste tu contraseña?
+                            </a>
                         </div>
-                        <input type="password" class="form-control no-radius" id="Contraseña" name="Contraseña" placeholder="Contraseña"
-                            required style="background: transparent; border: 1px solid #ccc; width: 100%;">
+                        <input type="password" class="form-control" id="Contraseña" name="Contraseña" placeholder="Contraseña">
                     </div>
 
-                    <!-- Botón iniciar sesión centrado -->
-                    <button type="submit" class="btn btn-gray-cool" 
-                            style="display: block; width: 60%; margin: 10px auto;">INICIAR SESIÓN</button>
+                    <button type="submit" class="btn btn-gray-cool btn-login">INICIAR SESIÓN</button>
 
-                    <!-- Línea con "or" -->
-                    <div style="display: flex; align-items: center; text-align: center; margin: 10px 0;">
-                        <hr style="flex: 1; border: 1px solid #000000;">
-                        <span style="margin: 0 10px;">OR</span>
-                        <hr style="flex: 1; border: 1px solid #000000;">
+                    <div class="divider">
+                        <hr>
+                        <span>OR</span>
+                        <hr>
                     </div>
 
-                    <!-- Botón crear cuenta centrado -->
-                    <button type="button" class="btn btn-gray-cool" 
-                            style="display: block; width: 60%; margin: 10px auto;"
-                            data-bs-toggle="modal" data-bs-target="#registerModal">CREAR UNA CUENTA</button>
+                    <button type="button" class="btn btn-gray-cool btn-create" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        CREAR UNA CUENTA
+                    </button>
                 </form>
-                
             </div>
         </div>
-        
     </main>
 
     <!-- Footer -->
