@@ -26,9 +26,9 @@ function createNavbar() {
 
                 <!-- DERECHA: Iconos -->
                 <div class="navbar-right d-flex justify-content-end align-items-center" style="flex: 1;">
-                    <a href="#" class="icon-circle me-2"><i class="bi bi-cart3"></i></a>
-                    <a href="#" class="icon-circle me-2"><i class="bi bi-heart"></i></a>
-                    <a href="#" class="icon-circle me-3"><i class="bi bi-person"></i></a>
+                    <a href="/html/carrito_de_compras.html" class="icon-circle me-2"><i class="bi bi-cart3"></i></a>
+                    <a href="/html/favoritos.html" class="icon-circle me-2"><i class="bi bi-heart"></i></a>
+                    <a href="/html/mi_cuenta/inicio_de_sesion.html" class="icon-circle me-3"><i class="bi bi-person"></i></a>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@ function createNavbar() {
             <div class="collapse custom-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" aria-current="page" href="../pagina_principal.html">INICIO</a>
+                <a class="nav-link active rubik-style" aria-current="page" href="../../pagina_principal.html">INICIO</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link active rubik-style" href="/html/productos.html">PRODUCTOS</a>
@@ -65,7 +65,7 @@ function createFooter() {
             <div class="footer-section">
                 <h4 class="p-0">Categorías</h4>
                 <ul class="">
-                    <li><a href="../pagina_principal.html">Inicio</a></li>
+                    <li><a href="../../pagina_principal.html">Inicio</a></li>
                     <li><a href="/html/productos.html">Productos</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Ofertas</a></li>

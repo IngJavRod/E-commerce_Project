@@ -206,6 +206,7 @@ footer button:hover {
 .btn-gray-cool {
     background-color: var(--color-gray-cool);
     color: var(--color-black);
+    border-radius: 0 !important;
 }
 
 .btn-gray-cool:hover {
