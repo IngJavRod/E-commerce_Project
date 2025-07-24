@@ -31,42 +31,50 @@
 					<form id="productoForm">
 						<div class="mb-3">
 							<label for="nombreProducto" class="form-label">Nombre del producto:</label>
-							<input type="text" class="form-control" id="nombreProducto" name="nombre"  />
+							<input type="text" class="form-control" id="nombreProducto" name="nombre" required/>
+							<div class="invalid-feedback">Este campo es obligatorio</div>
+
 						</div>
 						<div class="mb-3">
-							<label for="imagenesProducto" class="form-label">URL de las imagenes (Separados por comas):</label>
-							<input type="text" class="form-control" id="imagenesProducto" name="imagenes"  />
+							<label for="imagenesProducto" class="form-label">URL de las imagenes (Separados por
+								comas):</label>
+							<input type="text" class="form-control" id="imagenesProducto" name="imagenes" required />
 						</div>
 						<div class="mb-3">
 							<label for="descripcionProducto" class="form-label">Descripción</label>
-							<textarea type="text" class="form-control" id="descripcionProducto" name="descripcion"
-								></textarea>
+							<textarea type="text" class="form-control" id="descripcionProducto"
+								name="descripcion"></textarea>
 						</div>
 						<div class="mb-3">
-							<label for="tallasProducto" class="form-label">Tallas Disponibles (S, M ,L, etc. separadas por coma):
+							<label for="tallasProducto" class="form-label">Tallas Disponibles (S, M ,L, etc. separadas
+								por coma):
 							</label>
-							<input type="text" class="form-control" id="tallasProducto" name="tallas"  />
+							<input type="text" class="form-control" id="tallasProducto" name="tallas" required/>
 						</div>
 						<div class="mb-3">
 							<label for="precioProducto" class="form-label">Precio del Producto (MXN):</label>
-							<input type="number" class="form-control" id="precioProducto" name="precio"  />
+							<input type="number" class="form-control" id="precioProducto" name="precio" required/>
 						</div>
 						<div class="mb-3">
 							<label class="form-label" id="categorias">Categorías:</label><br>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones" id="catPlayeras">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones"
+									id="catPlayeras">
 								<label class="form-check-label" for="catPlayeras">Playeras</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones" id="catPantalones">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones"
+									id="catPantalones">
 								<label class="form-check-label" for="catPantalones">Pantalones</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="categoria" value="Sudaderas" id="catSudaderas">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Sudaderas"
+									id="catSudaderas">
 								<label class="form-check-label" for="catSudaderas">Sudaderas</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="categoria" value="Accesorios" id="catAccesorios">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Accesorios"
+									id="catAccesorios">
 								<label class="form-check-label" for="catAccesorios">Accesorios</label>
 							</div>
 						</div>
@@ -86,7 +94,8 @@
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="responseModalLabel">Resultado del envío</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Cerrar"></button>
 							</div>
 							<div class="modal-body" id="modalMessage">
 								<!-- Mensaje de éxito o error -->
@@ -99,7 +108,7 @@
 	<footer></footer>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="/javascript/contacto.js"></script>
 	<script src="/javascript/validacion_form.js"></script>
 	<!-- Script externo -->

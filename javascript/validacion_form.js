@@ -64,3 +64,17 @@ function mostrarErrores(errores) {
         contenedor.appendChild(alerta);
     }
 }
+
+// Esperar a que cargue el DOM
+document.addEventListener('DOMContentLoaded', () => {
+  const formulario = document.getElementById('productoForm');
+
+  formulario.addEventListener('submit', function (event) {
+    if (!formulario.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    formulario.classList.add('was-validated');
+  });
+});
