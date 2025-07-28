@@ -49,19 +49,19 @@ function aplicarEfectosHover() {
 
         card.addEventListener('mouseleave', () => {
             img.src = imagenes[0];
-            img.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
+            //img.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
         });
 
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -5;
-            const rotateY = ((x - centerX) / centerX) * 5;
-            img.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+        // card.addEventListener('mousemove', e => {
+        //     const rect = card.getBoundingClientRect();
+        //     const x = e.clientX - rect.left;
+        //     const y = e.clientY - rect.top;
+        //     const centerX = rect.width / 2;
+        //     const centerY = rect.height / 2;
+        //     const rotateX = ((y - centerY) / centerY) * -5;
+        //     const rotateY = ((x - centerX) / centerX) * 5;
+        //     img.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        // });
     });
 }
 
@@ -104,16 +104,31 @@ function renderizarProductos(productosLista) {
 
             return `
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                    <a href="#" class="text-decoration-none text-dark d-block h-100 producto-link" data-id="${producto.id}">
-                        <div class="card h-100" data-imagenes='${imagenesData}' style="width: 100%;">
-                            <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.producto}">
-                            <div class="card-body">
-                                <h5 class="card-title">${producto.producto}</h5>
-                                <p class="card-text mb-1 small">${producto.descripcion}</p>
-                                <p class="card-text text-end w-100 mb-0 small"><strong>${precioFormateado}</strong></p>
-                            </div>
+                <a href="#" class="text-decoration-none text-dark d-block h-100 producto-link" data-id="${producto.id}">
+                    <div class="card h-100" data-imagenes='${imagenesData}' 
+                        style="width: 100%; height: 100%; background-color: white; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
+                        
+                        <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.producto}" 
+                            style="height: 300px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+
+                        <div class="card-body" 
+                            style="display: flex; flex-direction: column; flex-grow: 1; background-color: white; padding: 1rem;">
+                            
+                            <h5 class="card-title" style="font-size: 1rem; min-height: 2.4em; margin-bottom: 0.5rem;">
+                                ${producto.producto}
+                            </h5>
+
+                            <p class="card-text small" style="min-height: 3.5em; margin-bottom: 0.1rem; font-size: 0.95rem;">
+                                ${producto.descripcion}
+                            </p>
+
+                            <p class="card-text text-end w-100 mb-0 small" 
+                                style="margin-top: auto; font-weight: bold; font-size: 0.95rem;">
+                                ${precioFormateado}
+                            </p>
                         </div>
-                    </a>
+                    </div>
+                </a>
                 </div>
             `;
         }).join('');
