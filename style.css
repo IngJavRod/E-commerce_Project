@@ -306,3 +306,101 @@ footer button:hover {
     }
 }
 
+/* ============================ Carrusel Principal ============================ */
+/* Comentario: El carrusel y su recuadro blanco ocupan el 100% del área central */
+.carousel-section {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin-top: 36px;
+    margin-bottom: 24px;
+    position: relative;
+    padding: 0;
+}
+#carouselKingTiger {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.carousel-img {
+    border-radius: 30px;
+    border: 0px solid #fff;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    background: linear-gradient(180deg, rgba(233,233,233,0) 23%, #E9E9E9 100%);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    box-sizing: border-box;
+}
+.carousel-inner {
+    box-shadow: 0 0 0 0 transparent;
+}
+.carousel-control-prev, .carousel-control-next {
+    display: none;
+}
+/* Responsive: menos alto en pantallas pequeñas */
+@media (max-width: 1200px) {
+    .carousel-img { height: 400px; }
+}
+@media (max-width: 900px) {
+    .carousel-img { height: 250px; }
+}
+@media (max-width: 600px) {
+    .carousel-img { height: 140px; }
+}
+/* ===============================  SECCIÓN ENFOQUE URBANO =========================== ==== */
+.urban-focus-section {
+    background: rgba(255,255,255,0.02);
+    padding: 50px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.urban-focus-container {
+    width: 90vw;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.urban-title {
+    font-family: var(--font-body), sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.urban-desc {
+    font-family: var(--font-body), sans-serif;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.urban-images-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.urban-img {
+    background: #f4f4f4;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    width: 330px;
+    height: 420px;
+    object-fit: cover;
+}
+@media (max-width: 900px) {
+    .urban-img { width: 130px; height: 170px; }
+    .urban-title { font-size: 1.4rem;}
+}
+@media (max-width: 600px) {
+    .urban-images-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .urban-img { width: 45vw; height: 120px; }
+}
