@@ -26,12 +26,12 @@ section[id^="categoria-"] {
 }
 
 .card:hover .card-img-top {
-    transform: perspective(600px) rotateY(10deg) rotateX(3deg) !important;
+    /*transform: perspective(600px) rotateY(10deg) rotateX(3deg) !important;*/
 }
 
 .card {
-    background-color: transparent !important;
-    border: none; /* opcional: quita el borde */
+    background-color: white !important;
+    border-radius: 5px; /* opcional: quita el borde */
     box-shadow: none; /* opcional: quita sombra */
 }
 
