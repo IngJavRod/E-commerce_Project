@@ -3,42 +3,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito de compras</title>
+    <title>Carrito de Compras</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rubik+Beastly&display=swap" rel="stylesheet" />
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/carrito_de_compras.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styles/carrito_de_compras.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
     <header></header>
 
     <!-- Contenido principal -->
-    <main class="container py-4">
-        <h1>Carrito de compras</h1>
-        
+    <main class="container-fluid py-4 flex-grow-1">
+        <section>
+            <div class="row g-4">
+                <h2 class="mb-3 text-center">TU CARRITO</h2>
+
+                <!-- Listado de productos -->
+                <div class="col-12 col-lg-8">
+                    <div id="carrito-productos" class="row g-4">
+                        <!-- Productos renderizados con JS -->
+                    </div>
+                </div>
+
+                <!-- Resumen de compra -->
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-sm p-4">
+                        <h4 class="mb-3">RESUMEN DE COMPRA</h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">TOTAL:</span>
+                            <span id="carrito-total" class="fw-bold text-success">$0.00</span>
+                        </div>
+                        <hr>
+                        <button id="finalizar-compra" class="btn btn-success w-100">
+                            FINALIZAR COMPRA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="mt-auto"></footer>
-    
-    <!-- Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-    <!-- Script local -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script Local -->
     <script type="module" src="../javascript/carrito_de_compras.js"></script>
-    <!-- Script Externo -->
-    <script src="../../script.js"></script>
-
-
+    <script src="../script.js"></script>
 </body>
 </html>

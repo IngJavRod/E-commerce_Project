@@ -26,7 +26,7 @@ function createNavbar() {
 
                 <!-- DERECHA: Iconos -->
                 <div class="navbar-right d-flex justify-content-end align-items-center" style="flex: 1;">
-                    <a href="/html/carrito_de_compras.html" class="icon-circle me-2"><i class="bi bi-cart3"></i></a>
+                    <a href="/html/carrito_de_compras.html" class="icon-circle me-2"><i class="bi bi-cart3"></i></a> 
                     <a href="/html/favoritos.html" class="icon-circle me-2"><i class="bi bi-heart"></i></a>
                     <a href="/html/mi_cuenta/inicio_de_sesion.html" class="icon-circle me-3"><i class="bi bi-person"></i></a>
                 </div>
