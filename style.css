@@ -306,3 +306,134 @@ footer button:hover {
     }
 }
 
+/* ============================ Carrusel Principal ============================ */
+/* Comentario: El carrusel y su recuadro blanco ocupan el 100% del área central */
+.carousel-section {
+    width: 100vw;
+    max-width: 850px;
+    min-height: unset;
+    margin: 36px auto 24px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    padding: 0;
+}
+#carouselKingTiger {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.carousel-img {
+    aspect-ratio: 4/3; /* 16/9, 4/3, 3/2, 1/1  ajusta según prefieras  */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    border: none ;
+    object-fit: contain; /* esto ajusta la responsividad del carrusel */
+    /* object-fit: cover; si quieres que ocupe todo el espacio */
+    background: transparent;
+    box-shadow: none;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
+.carousel-inner {
+    box-shadow: 0 0 0 0 transparent;
+}
+.carousel-control-prev, .carousel-control-next {
+    display: none;
+}
+/* Responsive: menos alto en pantallas pequeñas esto se elimino ya que con object-fit: contain se maneja la responsividad */
+
+
+/* ===============================  SECCIÓN ENFOQUE URBANO =========================== ==== */
+.urban-focus-section {
+    background: rgba(255,255,255,0.02);
+    padding: 50px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.urban-focus-container {
+    width: 95vw;
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+}
+.urban-title {
+    font-family: var(--font-body), sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.urban-desc {
+    font-family: var(--font-body), sans-serif;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.urban-images-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: nowrap;   /* <--- la clave */
+    overflow-x: auto;    /* <--- opcional, útil en pantallas pequeñas */
+    padding-bottom: 8px; /* <--- opcional */
+        /* Oculta barra de scroll en algunos navegadores */
+    scrollbar-width: none;
+}
+.urban-img {
+    background: #f4f4f4;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    width: 230px;
+    max-width: 95vw;
+    aspect-ratio: 3/4;        /* imagen vertical */
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: width 0.2s;
+}
+
+
+/* Responsive:Tablet */
+@media (max-width: 900px) {
+    .urban-img {
+        width: 130px;
+        aspect-ratio: 2/3;
+    }
+    .urban-title { font-size: 1.4rem;}
+}
+
+/* Responsive:Mobile */
+@media (max-width: 600px) {
+    .urban-img {
+        width: 60vw;
+        max-width: 180px;
+        aspect-ratio: 2/3;
+    }
+    .urban-images-row {
+        gap: 10px;
+    }
+}
+
+
+
+/* ************** NOVEDADES PAGINA PRINCIPAL **************** */
+.novedades-section {
+    background: rgba(255,255,255,0.02);
+    margin-bottom: 40px;
+}
+.novedades-title {
+    font-family: var(--font-body), sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    margin-top: 0;
+    text-align: left;
+}
