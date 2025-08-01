@@ -1,0 +1,54 @@
+.login-box {
+    border: 2px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0; /* o personaliza */
+}
+
+.caption-style {
+    font-weight: 100;
+    text-align: start;
+}
+
+.login-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form .form-control {
+    background: transparent;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 0; 
+}
+
+.forgot-link {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-login,
+.btn-create {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.divider hr {
+    flex: 1;
+    border: 1px solid #000;
+}
+
+.divider span {
+    margin: 0 10px;
+}

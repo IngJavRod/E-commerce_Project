@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>AgregarProducto</title>
+	<!-- BootStrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Patrick+Hand:wght@700&family=PT+Serif+Caption&family=Raleway:wght@400;700&family=Rubik+Beastly&display=swap"
+		rel="stylesheet">
+	<!-- Estilo externo -->
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+	<!-- navbar -->
+	<header></header>
+	<main class="">
+		<div class="container my-4">
+			<h1 class="text-center mb-4">Agregar Producto</h1>
+
+			<div class="row justify-content-center align-items-center">
+
+				<!-- Columna del formulario -->
+				<div class="col-md-9">
+					<form id="productoForm">
+						<div class="mb-3">
+							<label for="nombreProducto" class="form-label">Nombre del producto:</label>
+							<input type="text" class="form-control" id="nombreProducto" name="nombre" required/>
+							<div class="invalid-feedback">Este campo es obligatorio</div>
+
+						</div>
+						<div class="mb-3">
+							<label for="imagenesProducto" class="form-label">URL de las imagenes (Separados por
+								comas):</label>
+							<input type="text" class="form-control" id="imagenesProducto" name="imagenes" required />
+						</div>
+						<div class="mb-3">
+							<label for="descripcionProducto" class="form-label">Descripción</label>
+							<textarea type="text" class="form-control" id="descripcionProducto"
+								name="descripcion"></textarea>
+						</div>
+						<div class="mb-3">
+							<label for="tallasProducto" class="form-label">Tallas Disponibles (S, M ,L, etc. separadas
+								por coma):
+							</label>
+							<input type="text" class="form-control" id="tallasProducto" name="tallas" required/>
+						</div>
+						<div class="mb-3">
+							<label for="precioProducto" class="form-label">Precio del Producto (MXN):</label>
+							<input type="number" class="form-control" id="precioProducto" name="precio" required/>
+						</div>
+						<div class="mb-3">
+							<label class="form-label" id="categorias">Categorías:</label><br>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones"
+									id="catPlayeras">
+								<label class="form-check-label" for="catPlayeras">Playeras</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones"
+									id="catPantalones">
+								<label class="form-check-label" for="catPantalones">Pantalones</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Sudaderas"
+									id="catSudaderas">
+								<label class="form-check-label" for="catSudaderas">Sudaderas</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" name="categoria" value="Accesorios"
+									id="catAccesorios">
+								<label class="form-check-label" for="catAccesorios">Accesorios</label>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center">
+							<button type="submit" class="btn btn-gray-cool" style="border-radius: 10px;">
+								Guardar Producto
+							</button>
+						</div>
+					</form>
+					<div id="alertas" class="mt-3"></div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="responseModalLabel">Resultado del envío</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Cerrar"></button>
+							</div>
+							<div class="modal-body" id="modalMessage">
+								<!-- Mensaje de éxito o error -->
+							</div>
+						</div>
+					</div>
+				</div>
+	</main>
+	<!-- footer -->
+	<footer></footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+		</script>
+	<script src="/javascript/contacto.js"></script>
+	<script src="/javascript/validacion_form.js"></script>
+	<!-- Script externo -->
+	<script src="../script.js"></script>
+</body>
+
+</html>
