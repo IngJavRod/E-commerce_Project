@@ -10,7 +10,8 @@ export const productos = [
         descripcion: "Sudadera color negra con diseño de esqueleto humano con técnica de decoloración de tela, 100% algodón. ¡Muy chida!",
         tallas: ["S", "M", "L"],
         precio: 1200,
-        categoria: "Sudaderas"
+        categoria: "Sudaderas",
+        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
     },
     {
         id: 2,
@@ -36,7 +37,8 @@ export const productos = [
         descripcion: "Playera 100% algodón, manga corta",
         tallas: ["S", "M", "L"],
         precio: 300,
-        categoria: "playeras"
+        categoria: "playeras",
+        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
     },
     {
         id: 4,
@@ -101,7 +103,8 @@ export const productos = [
         descripcion: "Sudadera con capucha negra con logo, 100% algodón",
         tallas: ["S", "M", "L"],
         precio: 600,
-        categoria: "Sudaderas"
+        categoria: "Sudaderas",
+        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
     },
     {
         id: 9,
@@ -114,7 +117,8 @@ export const productos = [
         descripcion: "Sudadera color uva con diseño de esqueleto humano con técnica de decoloración de tela, 100% algodón. ¡Muy chida!",
         tallas: ["S", "M", "L"],
         precio: 700,
-        categoria: "Sudaderas"
+        categoria: "Sudaderas",
+        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
     },
     {
         id: 10,
