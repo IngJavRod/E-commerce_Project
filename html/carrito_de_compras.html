@@ -23,33 +23,41 @@
 
     <!-- Contenido principal -->
     <main class="container-fluid py-4 flex-grow-1">
-        <section>
-            <div class="row g-4">
-                <h2 class="mb-3 text-center">TU CARRITO</h2>
-
-                <!-- Listado de productos -->
-                <div class="col-12 col-lg-8">
-                    <div id="carrito-productos" class="row g-4">
-                        <!-- Productos renderizados con JS -->
-                    </div>
-                </div>
-
-                <!-- Resumen de compra -->
-                <div class="col-12 col-lg-4">
-                    <div class="card shadow-sm p-4">
-                        <h4 class="mb-3">RESUMEN DE COMPRA</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="fw-bold">TOTAL:</span>
-                            <span id="carrito-total" class="fw-bold text-success">$0.00</span>
+        <div class="ps-5">
+            <section>
+                <div class="row g-4">
+                    <!-- Listado de productos -->
+                    <div class="col-12 col-lg-8">
+                        <h4>CARRITO DE COMPRAS</h4>
+                        <hr><br>
+                        <div id="carrito-productos" class="row g-4">
+                            <!-- Productos renderizados con JS -->
                         </div>
-                        <hr>
-                        <button id="finalizar-compra" class="btn btn-success w-100">
-                            FINALIZAR COMPRA
-                        </button>
+                        <br><hr><br>
+                    </div>
+
+                    <!-- Resumen de compra -->
+                    <div class="col-12 col-lg-4">
+                        <br><br><br> 
+                        <div class="card tarjeta shadow-sm p-4">
+                            <h4 class="mb-3">RESUMEN DE COMPRA</h4>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">TOTAL:</span>
+                                <span id="carrito-total" class="fw-bold">$0.00</span>
+                            </div>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="aceptar-terminos" name="terminos" required>
+                                Acepto los <a href="#" target="_blank" class="box">Términos y Condiciones</a> <br><br>
+                            </label>
+                            <button id="finalizar-compra" class="btn btn-gray-cool w-100">
+                                FINALIZAR COMPRA
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Footer -->

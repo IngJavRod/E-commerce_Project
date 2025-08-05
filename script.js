@@ -19,7 +19,7 @@ function createNavbar() {
 
                 <!-- CENTRO: Logo -->
                 <div class="navbar-center d-flex justify-content-center align-items-center flex-grow-1" style="height: 100px;">
-                    <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="#" style="line-height: 0;">
+                    <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="../../index.html" style="line-height: 0;">
                         <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
                     </a>
                 </div>
@@ -36,7 +36,7 @@ function createNavbar() {
             <div class="collapse custom-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" aria-current="page" href="../../pagina_principal.html">INICIO</a>
+                <a class="nav-link active rubik-style" aria-current="page" href="../../index.html">INICIO</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link active rubik-style" href="/html/productos.html">PRODUCTOS</a>
@@ -65,7 +65,7 @@ function createFooter() {
             <div class="footer-section">
                 <h4 class="p-0">Categorías</h4>
                 <ul class="">
-                    <li><a href="../../pagina_principal.html">Inicio</a></li>
+                    <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="/html/productos.html">Productos</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Ofertas</a></li>

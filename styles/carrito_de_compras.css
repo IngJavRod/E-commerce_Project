@@ -2,7 +2,7 @@
 
 /* Borde redondeado para la tabla */
 #carrito-productos .table {
-    border-radius: 8px;
+    border-radius: 0px;
     overflow: hidden;
     margin-bottom: 1rem;
 }
@@ -83,4 +83,22 @@
 
 .divider span {
     margin: 0 10px;
+}
+
+.tarjeta{
+    background-color: transparent;
+    border-radius: 0px;
+    width: 70%;
+    margin: auto;
+
+}
+
+.btn-transparent i {
+    font-size: 1.5rem;
+}
+.btn-transparent:hover {
+    color: #6e3f3f; /* Oscurecer un poco al pasar el mouse */
+}
+.box{
+    color: #000;
 }
