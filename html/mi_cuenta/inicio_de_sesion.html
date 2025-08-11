@@ -55,13 +55,46 @@
                         <hr>
                     </div>
 
-                    <button type="button" class="btn btn-gray-cool btn-create " data-bs-toggle="modal" data-bs-target="#registerModal">
+                    <button type="button" class="btn btn-gray-cool btn-create ">
                         <a href="crear_cuenta.html" style="text-decoration: none; color: inherit;">CREAR UNA CUENTA</a>
                     </button>
                 </form>
             </div>
         </div>
     </main>
+
+    <!-- Modal Olvidé la contraseña -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+
+            <form id="forgotPasswordForm">
+
+                <div class="d-flex align-items-center mb-3">
+                <button type="button" class="btn btn-link p-0 me-3" data-bs-dismiss="modal" aria-label="Regresar" 
+                    style="font-size: 2.5rem; line-height: 1; color: inherit; text-decoration: none;">
+                    ←
+                </button> <br>
+                <h4 id="forgotPasswordModalLabel" class="mb-0" style="margin-left: 0.5rem;">RESTABLECER SU CONTRASEÑA</h4>
+                </div>
+
+                <div class="mb-3">
+                <label for="emailRecovery" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="emailRecovery" name="emailRecovery" placeholder="Ingresa tu correo" required>
+                </div>
+
+                <div id="forgotPasswordMessage" class="alert d-none" role="alert"></div>
+
+                <button type="submit" class="btn btn-gray-cool w-100" style="max-width: 100%; margin: 0 auto;">
+                Enviar
+                </button>
+
+            </form>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="mt-auto"></footer>

@@ -1,10 +1,91 @@
 import { productos } from "./catalogo.js";
 
+let carrito = [];
+
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById('carrito-productos');
     const totalContainer = document.getElementById('carrito-total');
     const finalizarBtn = document.getElementById('finalizar-compra');
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    renderizarCarrito();
+
+    container.addEventListener('click', e => {
+        if (e.target.classList.contains('eliminar-item')) {
+            e.preventDefault();
+            const key = e.target.getAttribute('data-key');
+            carrito = carrito.filter(p => `${p.id}-${p.talla}` !== key);
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Eliminado del carrito!",
+                showConfirmButton: false,
+                timer: 1000
+            });
+            actualizarCarrito(carrito);
+        }
+
+        if (e.target.classList.contains('ajustar-cantidad')) {
+            e.preventDefault();
+            const key = e.target.getAttribute('data-key');
+            const [idStr, talla] = key.split('-');
+            const id = Number(idStr);
+            const action = e.target.getAttribute('data-action');
+
+            if (action === 'sumar') {
+                carrito.push({ id, talla });
+            } else if (action === 'restar') {
+                const index = carrito.findIndex(p => p.id === id && p.talla === talla);
+                if (index !== -1) carrito.splice(index, 1);
+            }
+            if (carrito.length === 0){
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Eliminado del carrito!",
+                    showConfirmButton: false,
+                    timer: 1000
+                });
+            }
+
+            actualizarCarrito(carrito);
+        }
+
+    });
+
+    finalizarBtn.addEventListener('click', () => {
+        const checkbox = document.getElementById('aceptar-terminos');
+
+        if (!checkbox.checked) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Debes aceptar los Términos y Condiciones',
+                confirmButtonText: 'Ok'
+            });
+            return;
+        }
+
+        Swal.fire({
+            title: "¡Gracias por tu compra!",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        }).then(() => {
+            localStorage.removeItem('carrito');
+            window.location.href = 'finalizar-compra.html';
+        });
+    });
+});
+
+const actualizarCarrito = (nuevoCarrito) => {
+    carrito = nuevoCarrito;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    renderizarCarrito();
+};
+
+function renderizarCarrito() {
+    const container = document.getElementById('carrito-productos');
+    const totalContainer = document.getElementById('carrito-total');
+    const finalizarBtn = document.getElementById('finalizar-compra');
 
     if (carrito.length === 0) {
         container.innerHTML = '<p class="text-center">No hay productos en el carrito.</p>';
@@ -12,11 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         finalizarBtn.disabled = true;
         return;
     }
-
-    const actualizarCarrito = (nuevoCarrito) => {
-        localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-        location.reload();
-    };
 
     const agruparCarrito = () => {
         const agrupados = {};
@@ -63,11 +139,28 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row g-0">
                 <!-- Lado izquierdo: imagen + detalles -->
                 <div class="col-9 d-flex flex-column align-items-center justify-content-center p-2">
-                    <img src="${imagen}" class="img-fluid mb-2 border border-secondary" alt="${producto}" style="max-height: 400px; object-fit: contain;">
-                    <div class="text-start w-100">
-                        <h5 class="card-title  mb-1">${producto}</h5>
-                        <p class="card-text small mb-2">${descripcion}</p>
-                        <p class="fw-bold text-end mb-0">$${precio}</p>
+                    <div class="card h-100" data-imagenes='${imagen}'
+                        style="width: 100%; height: 100%; background-color: white; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
+                        
+                        <img src="${imagen}" class="card-img-top" alt="${producto}" 
+                            style="height: 300px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+
+                        <div class="card-body" 
+                            style="display: flex; flex-direction: column; flex-grow: 1; background-color: white; padding: 1rem;">
+                            
+                            <h5 class="card-title" style="font-size: 1rem; min-height: 2.4em; margin-bottom: 0.5rem;">
+                                ${producto}
+                            </h5>
+
+                            <p class="card-text small" style="min-height: 3.5em; margin-bottom: 0.1rem; font-size: 0.95rem;">
+                                ${descripcion}
+                            </p>
+
+                            <p class="card-text text-end w-100 mb-0 small" 
+                                style="margin-top: auto; font-weight: bold; font-size: 0.95rem;">
+                                $${precio}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -92,58 +185,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     totalContainer.textContent = `$${total.toFixed(2)}`;
-
-    container.addEventListener('click', e => {
-        // Eliminar producto
-        if (e.target.classList.contains('eliminar-item')) {
-            const key = e.target.getAttribute('data-key');
-            carrito = carrito.filter(p => `${p.id}-${p.talla}` !== key);
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Eliminado del carrito!",
-                showConfirmButton: false,
-                timer: 1000
-            }).then(() => location.reload());
-        }
-
-        // Ajustar cantidad
-        if (e.target.classList.contains('ajustar-cantidad')) {
-            const key = e.target.getAttribute('data-key');
-            const [id, talla] = key.split('-');
-            const action = e.target.getAttribute('data-action');
-
-            if (action === 'sumar') {
-                carrito.push({ id, talla });
-            } else if (action === 'restar') {
-                const index = carrito.findIndex(p => p.id === id && p.talla === talla);
-                if (index !== -1) carrito.splice(index, 1);
-            }
-
-            actualizarCarrito(carrito);
-        }
-    });
-
-    finalizarBtn.addEventListener('click', () => {
-        const checkbox = document.getElementById('aceptar-terminos');
-
-        if (!checkbox.checked) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Debes aceptar los Términos y Condiciones',
-                confirmButtonText: 'Ok'
-            });
-            return;
-        }
-
-        Swal.fire({
-            title: "¡Gracias por tu compra!",
-            icon: "success",
-            confirmButtonText: "Aceptar"
-        }).then(() => {
-            localStorage.removeItem('carrito');
-            window.location.href = 'finalizar-compra.html';
-        });
-    });
-});
+    finalizarBtn.disabled = false;
+}

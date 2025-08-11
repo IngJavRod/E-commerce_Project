@@ -236,3 +236,13 @@ html {
     --shirt-second-color: #17171B;
     --shirt-second-logo: #fff;
 }
+
+#btn-favorito svg path {
+    cursor: pointer;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+#btn-favorito.active svg path {
+    fill: red;
+    stroke: red;
+}

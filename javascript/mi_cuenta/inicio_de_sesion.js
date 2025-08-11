@@ -36,4 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`¡Bienvenido, ${usuario.nombre}! Has iniciado sesión correctamente ✅`);
         window.location.href = '/pagina_principal.html';
     });
+
+    const forgotModal = document.getElementById('forgotPasswordModal');
+    if (forgotModal) {
+        forgotModal.addEventListener('shown.bs.modal', () => {
+            document.getElementById('emailRecovery').focus();
+        });
+    }
+    const forgotForm = document.getElementById('forgotPasswordForm');
+
+    forgotForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evita que el formulario recargue la página
+
+        alert('En tu correo se le llegará las instrucciones para recuperar la contraseña.');
+
+        forgotForm.reset(); // Opcional: limpia el formulario después del alert
+    });
+
+
 });

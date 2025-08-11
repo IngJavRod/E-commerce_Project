@@ -96,3 +96,6 @@ function limpiarError() {
     }
 }
 
+document.getElementById('btn-regresar').addEventListener('click', () => {
+    history.back();
+});
