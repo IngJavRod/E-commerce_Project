@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         alert(`¡Bienvenido, ${usuario.nombre}! Has iniciado sesión correctamente ✅`);
-        window.location.href = '/pagina_principal.html';
+        window.location.href = '/index.html';
     });
 
     const forgotModal = document.getElementById('forgotPasswordModal');
