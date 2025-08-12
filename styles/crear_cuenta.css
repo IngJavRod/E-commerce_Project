@@ -1,0 +1,58 @@
+/* Contenedor general con borde redondeado y sombra */
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+/* Estilo del título */
+.caption-style {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Inputs */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+/* Botón principal */
+.btn-login {
+    background-color: #a0a0a0;
+    color: #000;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover efecto para botón */
+.btn-login:hover {
+    background-color: #000000;
+    color: #f3f3f3;
+}
+
+/* Ocultar elementos que no están en la imagen */
+.divider,
+.forgot-link,
+.btn-create {
+    display: none !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px;
+    }
+}

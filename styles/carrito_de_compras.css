@@ -1,0 +1,104 @@
+/* Estilo general para el carrito */
+
+/* Borde redondeado para la tabla */
+#carrito-productos .table {
+    border-radius: 0px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/* Filas */
+#carrito-productos .table tbody tr {
+    background-color: transparent !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover filas */
+#carrito-productos .table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Alineación y padding para celdas */
+#carrito-productos .table th {
+}
+
+#carrito-productos .table td {
+    background-color: transparent;
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Otros estilos (los que tenías) */
+.login-box {
+    border: 2px solid #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0;
+    background: transparent;
+}
+
+.caption-style {
+    font-weight: 100;
+    text-align: start;
+}
+
+.login-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form .form-control {
+    background: transparent;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 0;
+}
+
+.forgot-link {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-login,
+.btn-create {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.divider hr {
+    flex: 1;
+    border: 1px solid #000;
+}
+
+.divider span {
+    margin: 0 10px;
+}
+
+.tarjeta{
+    background-color: transparent;
+    border-radius: 0px;
+    width: 70%;
+    margin: auto;
+
+}
+
+.btn-transparent i {
+    font-size: 1.5rem;
+}
+.btn-transparent:hover {
+    color: #6e3f3f; /* Oscurecer un poco al pasar el mouse */
+}
+.box{
+    color: #000;
+}

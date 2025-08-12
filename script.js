@@ -9,43 +9,40 @@ function createNavbar() {
     const navbarContent = `
         <nav class="navbar">
             <div class="container-fluid d-flex align-items-center justify-content-between">
+                <!-- IZQUIERDA: Botón hamburguesa -->
+                <div class="navbar-left d-flex align-items-center" style="flex: 1;">
+                    <button class="navbar-toggler d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
 
-            <!-- Botón hamburguesa SIEMPRE visible -->
-            <button class="navbar-toggler d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- CENTRO: Logo -->
+                <div class="navbar-center d-flex justify-content-center align-items-center flex-grow-1" style="height: 100px;">
+                    <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="../../index.html" style="line-height: 0;">
+                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
+                    </a>
+                </div>
 
-            <!-- Logo centrado -->
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="100">
-            </a>
-
-            <!-- Iconos a la derecha -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="icon-circle me-2">
-                <i class="bi bi-cart3"></i>
-                </a>
-                <a href="#" class="icon-circle me-2">
-                <i class="bi bi-heart"></i>
-                </a>
-                <a href="#" class="icon-circle me-3">
-                <i class="bi bi-person"></i>
-                </a>
-            </div>
+                <!-- DERECHA: Iconos -->
+                <div class="navbar-right d-flex justify-content-end align-items-center" style="flex: 1;">
+                    <a href="/html/carrito_de_compras.html" class="icon-circle me-2"><i class="bi bi-cart3"></i></a> 
+                    <a href="/html/favoritos.html" class="icon-circle me-2"><i class="bi bi-heart"></i></a>
+                    <a href="/html/mi_cuenta/inicio_de_sesion.html" class="icon-circle me-3"><i class="bi bi-person"></i></a>
+                </div>
             </div>
 
             <!-- Menú colapsable alineado a la izquierda -->
             <div class="collapse custom-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" aria-current="page" href="../pagina_principal.html">INICIO</a>
+                <a class="nav-link active rubik-style" aria-current="page" href="../../index.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" href="#">PRODUCTOS</a>
+                <a class="nav-link active rubik-style" href="/html/productos.html">PRODUCTOS</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active rubik-style" href="#">ACERCA DE</a>
+                <a class="nav-link active rubik-style" href="/html/sobre_nosotros.html">ACERCA DE</a>
                 </li>
             </ul>
             </div>
@@ -68,8 +65,8 @@ function createFooter() {
             <div class="footer-section">
                 <h4 class="p-0">Categorías</h4>
                 <ul class="">
-                    <li><a href="../pagina_principal.html">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="/html/productos.html">Productos</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Descuentos</a></li>
@@ -79,7 +76,7 @@ function createFooter() {
                 <h4>General</h4>
                 <ul class="list-unstyled">
                     <li><a href="/html/sobre_nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="/html/contactanos.html">Contáctanos</a></li>
+                    <li><a href="/html/contacto.html">Contáctanos</a></li>
                     <li><a href="#">Términos y condiciones</a></li>
                     <li><a href="#">Política de privacidad</a></li>
                 </ul>
@@ -93,7 +90,7 @@ function createFooter() {
                 </ul>
             </div>
             <div class="footer-section">
-                <p class="rubik-style">Redes sociales</p>
+                <h4>Redes sociales</h4>
                 <ul class="list-unstyled">
                     <li>
                         <a href="https://www.facebook.com/thekingtigerMO" target="_blank" rel="noopener noreferrer"

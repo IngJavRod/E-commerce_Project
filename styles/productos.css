@@ -1,0 +1,40 @@
+html {
+    scroll-padding-top: 110px; /* para navegadores modernos */
+    scroll-behavior: smooth;
+}
+
+section[id^="categoria-"] {
+    position: relative;
+    padding-top: 25px; /* igual que el scroll-padding-top */
+     margin-top: -25px; /*para que el padding no afecte el layout visual */
+}
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-text {
+    font-size: 0.95rem;
+}
+
+.btn.add-to-cart svg {
+    margin-top: -2px;
+}
+.card-img-top {
+    transition: transform 0.5s ease !important;
+    transform-style: preserve-3d !important;
+}
+
+.card:hover .card-img-top {
+    /*transform: perspective(600px) rotateY(10deg) rotateX(3deg) !important;*/
+}
+
+.card {
+    background-color: white !important;
+    border-radius: 5px; /* opcional: quita el borde */
+    box-shadow: none; /* opcional: quita sombra */
+}
+
+.card-body {
+    background-color: transparent !important;
+}

@@ -1,0 +1,248 @@
+
+#detalle-recuadro {
+    background-color: transparent;
+    border: 1px solid #a0a0a0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+.miniatura {
+    flex-shrink: 0;
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 767.98px) {
+    .miniatura-container {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        max-height: 180px; 
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+}
+
+/* Boton */
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+.add-to-cart {
+    /* Variables existentes */
+    --background-default: var(--color-gray-cool, #d3d3d3);
+    --background-hover: var(--color-black, #000);
+    --text-color: var(--color-black, #000);
+    --text-o: 1;
+    --text-x: 12px;
+    --cart: #fff;
+    --cart-x: -48px;
+    --cart-y: 0px;
+    --cart-rotate: 0deg;
+    --cart-scale: .75;
+    --cart-clip: 0px;
+    --cart-clip-x: 0px;
+    --cart-tick-offset: 10px;
+    --cart-tick-color: #00fffc;
+    --shirt-y: -16px;
+    --shirt-scale: 0;
+    --shirt-color: var(--color-gray-cool, #d3d3d3);
+    --shirt-logo: var(--color-black, #000);
+    --shirt-second-y: 24px;
+    --shirt-second-color: var(--color-black, #000);
+    --shirt-second-logo: var(--color-gray-cool, #d3d3d3);
+
+    /* Estilos generales */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 12px 0;
+    width: 164px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+
+    /* De .no-radius */
+    border-radius: 0 !important;
+}
+
+.add-to-cart:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* De .btn-gray-cool */
+    background: var(--background, var(--background-default));
+    color: var(--text-color);
+    border-radius: 0 !important;
+
+    transition: background 0.25s;
+    transform: scaleX(var(--background-scale)) translateZ(0);
+}
+
+.add-to-cart:not(.active):hover {
+    --background: var(--background-hover);
+    --text-color: var(--color-beige-paper, #fef6e4); /* el color de hover */
+}
+.add-to-cart.active {
+    --background: #000;
+    --text-color: #fff;
+}
+
+.add-to-cart span {
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--text-color);
+    opacity: var(--text-o);
+    transform: translateX(var(--text-x)) translateZ(0);
+}
+
+.add-to-cart svg {
+    display: block;
+    width: var(--svg-width, 24px);
+    height: var(--svg-height, 24px);
+    position: var(--svg-position, relative);
+    left: var(--svg-left, 0);
+    top: var(--svg-top, 0);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.add-to-cart svg path {
+    fill: var(--svg-fill, none);
+    stroke: var(--svg-stroke, none);
+    stroke-width: var(--svg-stroke-width, 2);
+}
+
+.add-to-cart .morph {
+    --svg-width: 64px;
+    --svg-height: 13px;
+    --svg-left: 50%;
+    --svg-top: -12px;
+    --svg-position: absolute;
+    --svg-fill: var(--background, var(--background-default));
+    transition: fill 0.25s;
+    pointer-events: none;
+    margin-left: -32px;
+}
+
+.add-to-cart .shirt,
+.add-to-cart .cart {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+}
+
+.add-to-cart .shirt {
+    margin: -12px 0 0 -12px;
+    top: 0;
+    transform-origin: 50% 100%;
+    transform: translateY(var(--shirt-y)) scale(var(--shirt-scale));
+}
+
+.add-to-cart .shirt svg {
+    --svg-fill: var(--shirt-color);
+}
+
+.add-to-cart .shirt svg g {
+    --svg-fill: var(--svg-g-fill, var(--shirt-logo));
+}
+
+.add-to-cart .shirt svg.second {
+    --svg-fill: var(--shirt-second-color);
+    --svg-g-fill: var(--shirt-second-logo);
+    --svg-position: absolute;
+    -webkit-clip-path: polygon(0 var(--shirt-second-y), 24px var(--shirt-second-y), 24px 24px, 0 24px);
+    clip-path: polygon(0 var(--shirt-second-y), 24px var(--shirt-second-y), 24px 24px, 0 24px);
+}
+
+.add-to-cart .cart {
+    --svg-width: 36px;
+    --svg-height: 26px;
+    --svg-stroke: var(--cart);
+    top: 10px;
+    margin-left: -18px;
+    transform: translate(var(--cart-x), var(--cart-y)) rotate(var(--cart-rotate)) scale(var(--cart-scale)) translateZ(0);
+}
+
+.add-to-cart .cart:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 12px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    background: var(--cart);
+    -webkit-clip-path: polygon(0 0, 22px 0, calc(22px - var(--cart-clip-x)) var(--cart-clip), var(--cart-clip-x) var(--cart-clip));
+    clip-path: polygon(0 0, 22px 0, calc(22px - var(--cart-clip-x)) var(--cart-clip), var(--cart-clip-x) var(--cart-clip));
+}
+
+.add-to-cart .cart path.wheel {
+    --svg-stroke-width: 1.5;
+}
+
+.add-to-cart .cart path.tick {
+    --svg-stroke: var(--cart-tick-color);
+    stroke-dasharray: 10px;
+    stroke-dashoffset: var(--cart-tick-offset);
+}
+
+
+.dark {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dark .add-to-cart {
+    --background-default: #fff;
+    --background-hover: #F2F2F9;
+    --text-color: #17171B;
+    --cart: #17171B;
+    --cart-tick-color: #00fffc;
+    --shirt-color: #fff;
+    --shirt-logo: #17171B;
+    --shirt-second-color: #17171B;
+    --shirt-second-logo: #fff;
+}
+
+#btn-favorito svg path {
+    cursor: pointer;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+#btn-favorito.active svg path {
+    fill: red;
+    stroke: red;
+}
