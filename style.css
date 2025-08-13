@@ -284,6 +284,17 @@ footer button:hover {
     color: var(--color-beige-paper);
 }
 
+/* Corrige la parte del footer para que se mantenga fijo al final de la pagina */
+body { 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 /* ====== NUEVOS ESTILOS PARA EL FORMULARIO ====== */
 .btn-gray-cool {
     background-color: var(--color-gray-cool);
@@ -445,7 +456,8 @@ footer button:hover {
     text-align: center;
 }
 .urban-title {
-    font-family: var(--font-body), sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    color: #333;
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -509,10 +521,11 @@ footer button:hover {
     margin-right: auto;
 }
 .novedades-title {
-    font-family: var(--font-body), sans-serif;
-    font-size: 2.1rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #333;
+    font-size: 2.4rem;
     font-weight: 700;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
     margin-top: 0;
     text-align: center;
 }
