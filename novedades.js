@@ -16,9 +16,9 @@ function crearCard(producto) {
 
     // Card igual a productos.html
     return `
-        <div class="col-6 col-md-3 mb-4">
-            <a href="#" class="text-decoration-none text-dark d-block h-100 producto-link" data-id="${producto.id}">
-                <div class="card h-100" data-imagenes='${imagenesData}' style="width: 100%;">
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="#" class="text-decoration-none text-dark d-block producto-link" data-id="${producto.id}">
+                <div class="card" data-imagenes='${imagenesData}'>
                     <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.producto}">
                     <div class="card-body">
                         <h5 class="card-title">${producto.producto}</h5>
@@ -27,7 +27,7 @@ function crearCard(producto) {
                     </div>
                 </div>
             </a>
-        </div>
+        </div> 
     `;
 }
 

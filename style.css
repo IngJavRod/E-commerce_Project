@@ -1,12 +1,10 @@
 /* ====== VARIABLES GLOBALES ====== */
 :root {
-    /* Colores */
     --color-beige-paper: #f3f3f3;
     --color-black: #000000;
     --color-black-deep: #070707;
     --color-gray-cool: #a0a0a0;
 
-    /* Fuentes */
     --font-heading: 'Patrick Hand', cursive;
     --font-body: 'Raleway', sans-serif;
     --font-special: 'Rubik Beastly', cursive;
@@ -28,7 +26,6 @@ html, body {
 }
 
 main {
-
     margin-top: 120px;
 }
 
@@ -38,7 +35,7 @@ h2 { font-family: var(--font-body); font-weight: 700; }
 h3 { font-family: var(--font-special); font-weight: 400; }
 h4 { font-family: var(--font-caption); font-weight: 700; }
 
-p, li, span, a, footer, section, div {
+p, li, span, a, footer, section, div, label {
     font-family: var(--font-Beatrice);
     font-weight: 400;
 }
@@ -56,6 +53,7 @@ p, li, span, a, footer, section, div {
     top: 0;
     width: 100%;
     z-index: 1000;
+    left: 0;
 }
 
 .navbar-brand img {
@@ -67,8 +65,17 @@ p, li, span, a, footer, section, div {
 .navbar-toggler {
     border: none;
     background-color: transparent;
-    display: block;
+    display: none; /* Oculta hamburguesa por defecto */
     z-index: 1100;
+}
+
+.navbar-toggler-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='6' width='32' height='4' rx='2' fill='black'/%3E%3Crect y='14' width='32' height='4' rx='2' fill='black'/%3E%3Crect y='22' width='32' height='4' rx='2' fill='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
 }
 
 .custom-collapse {
@@ -85,6 +92,24 @@ p, li, span, a, footer, section, div {
     flex-direction: row;
     gap: 1rem;
     margin-left: 0.5rem;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    justify-content: center;
+    flex-grow: 1;
+    height: 100px;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+    flex: 1;
 }
 
 /* ====== COMPONENTES ====== */
@@ -109,45 +134,72 @@ p, li, span, a, footer, section, div {
     background-color: #333;
 }
 
-/* ====== FOOTER ====== */
+/* ====== FOOTER COMPACTO Y COLUMNA FIJA ====== */
 footer {
     background-color: var(--color-black-deep);
     background-image: url("https://www.transparenttextures.com/patterns/dark-denim.png");
     color: var(--color-gray-cool);
-    padding: 40px 20px;
+    padding: 18px 8px 10px 8px;
     margin-top: 1rem;
 }
 
 footer > div {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     max-width: 1200px;
     margin: auto;
+    gap: 0;
 }
 
 .footer-section {
-    margin: 1rem;
+    flex: 1;
+    min-width: 160px;
+    margin: 0 12px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: fit-content;
+    width: auto;
 }
 
-.footer-section p {
-    margin-bottom: 10px;
-    color: var(--color-gray-cool);
+footer > .text-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+footer .input-group {
+    margin: 0 auto;
+    max-width: 400px !important;
+}
+
+.logo-container {
+    margin-bottom: 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-image-footer img {
+    max-width: 110px;
+    height: auto;
+    display: block;
 }
 
 footer ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 4px 0;
 }
 
 footer ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 0.95rem;
     color: var(--color-gray-cool);
 }
@@ -163,46 +215,75 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin-bottom: 1rem;
-}
-
-.logo-image-footer img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-}
-
-.store-name {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: var(--color-gray-cool);
-}
-
-/* Botones en footer */
 footer button {
     background-color: var(--color-gray-cool);
     color: var(--color-black);
     border: none;
-    padding: 10px 15px;
+    padding: 7px 16px;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.95rem;
 }
 
+footer .form-control {
+    padding: 5px 10px;
+    font-size: 0.95rem;
+}
+
+footer hr {
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    border-top: 1px solid white;
+    width: 85%;
+    max-width: 900px;
+}
+
+.store-name {
+    text-align: center;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.85rem;
+    color: var(--color-gray-cool);
+}
+
+/* Responsive compact footer */
+@media (min-width: 901px) {
+    .footer-section:last-child {
+        margin-left: 48px; 
+    }
+}
+
+/* FOOTER móvil/tablet */
+@media (max-width: 900px) {
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .footer-section {
+        align-items: center;
+        margin: 0.5rem 0;
+        width: 100%;
+        min-width: unset;
+    }
+    .logo-image-footer img {
+        max-width: 80px;
+    }
+    footer ul {
+        justify-content: center;
+        margin-bottom: 3px;
+    }
+}
+
+/* Botones en footer */
 footer button:hover {
     background-color: var(--color-black);
     color: var(--color-beige-paper);
 }
 
 /* ====== NUEVOS ESTILOS PARA EL FORMULARIO ====== */
-
-/* Botón personalizado gris */
 .btn-gray-cool {
     background-color: var(--color-gray-cool);
     color: var(--color-black);
@@ -214,41 +295,21 @@ footer button:hover {
     color: var(--color-beige-paper);
 }
 
-/* Sin bordes redondeados (para input y botón) */
 .no-radius {
     border-radius: 0 !important;
 }
 
-/* ====== MEDIA QUERIES ====== */
-
-/* NAVBAR Ajustes para pantallas grandes */
-@media (min-width: 993px) {
+/* ====== MEDIA QUERIES NAVBAR ====== */
+/* NAVBAR: solo muestra hamburguesa en móvil/tablet */
+@media (max-width: 992px) {
     .navbar-toggler {
         display: block !important;
-        pointer-events: none;
     }
-
-    .custom-collapse {
-        display: flex !important;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .navbar-nav {
-        flex-direction: row !important;
-        gap: 1rem;
-        margin-left: 0.5rem;
-    }
-}
-
-/* NAVBAR y FOOTER en pantallas pequeñas */
-@media (max-width: 992px) {
     .custom-collapse {
         width: 100%;
         flex-direction: column;
         position: static;
     }
-
     .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -256,37 +317,61 @@ footer button:hover {
     }
 }
 
+/* NAVBAR escritorio: oculta hamburguesa, muestra menú horizontal */
+@media (min-width: 993px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+    .custom-collapse {
+        display: flex !important;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        left: 60px;
+        top: 35px;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+        gap: 1rem;
+        margin-left: 0.5rem;
+    }
+}
+
+/* Más compactación en móvil */
 @media (max-width: 768px) {
     footer > div {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
     }
-
     .footer-section {
         align-items: center;
+        margin: 0.5rem 0;
+        width: 100%;
+        min-width: unset;
     }
-
     .footer-section p {
         text-align: center;
         width: 100%;
     }
-
     .footer-section ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-wrap: wrap;
     }
-
     .footer-section ul li {
         padding: 0 1rem;
     }
-
     .contacto-section ul {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+    .logo-image-footer img {
+        max-width: 80px;
     }
 }
 @media (max-width: 576px) {
@@ -301,13 +386,12 @@ footer button:hover {
     }
     .input-group input,
     .input-group button {
-        width: 100%;  /* o 100% si quieres */
+        width: 100%;
         margin: 0.3rem 0;
     }
 }
 
 /* ============================ Carrusel Principal ============================ */
-/* Comentario: El carrusel y su recuadro blanco ocupan el 100% del área central */
 .carousel-section {
     width: 100vw;
     max-width: 850px;
@@ -326,14 +410,13 @@ footer button:hover {
     margin: 0 auto;
 }
 .carousel-img {
-    aspect-ratio: 4/3; /* 16/9, 4/3, 3/2, 1/1  ajusta según prefieras  */
+    aspect-ratio: 4/3;
     width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 0;
     border: none ;
-    object-fit: contain; /* esto ajusta la responsividad del carrusel */
-    /* object-fit: cover; si quieres que ocupe todo el espacio */
+    object-fit: contain;
     background: transparent;
     box-shadow: none;
     box-sizing: border-box;
@@ -346,10 +429,8 @@ footer button:hover {
 .carousel-control-prev, .carousel-control-next {
     display: none;
 }
-/* Responsive: menos alto en pantallas pequeñas esto se elimino ya que con object-fit: contain se maneja la responsividad */
 
-
-/* ===============================  SECCIÓN ENFOQUE URBANO =========================== ==== */
+/* ===============================  SECCIÓN ENFOQUE URBANO =============================== */
 .urban-focus-section {
     background: rgba(255,255,255,0.02);
     padding: 50px 0 30px 0;
@@ -381,10 +462,9 @@ footer button:hover {
     justify-content: center;
     align-items: flex-end;
     gap: 18px;
-    flex-wrap: nowrap;   /* <--- la clave */
-    overflow-x: auto;    /* <--- opcional, útil en pantallas pequeñas */
-    padding-bottom: 8px; /* <--- opcional */
-        /* Oculta barra de scroll en algunos navegadores */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
     scrollbar-width: none;
 }
 .urban-img {
@@ -393,15 +473,13 @@ footer button:hover {
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     width: 230px;
     max-width: 95vw;
-    aspect-ratio: 3/4;        /* imagen vertical */
+    aspect-ratio: 3/4;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
     transition: width 0.2s;
 }
 
-
-/* Responsive:Tablet */
 @media (max-width: 900px) {
     .urban-img {
         width: 130px;
@@ -410,7 +488,6 @@ footer button:hover {
     .urban-title { font-size: 1.4rem;}
 }
 
-/* Responsive:Mobile */
 @media (max-width: 600px) {
     .urban-img {
         width: 60vw;
@@ -422,12 +499,13 @@ footer button:hover {
     }
 }
 
-
-
 /* ************** NOVEDADES PAGINA PRINCIPAL **************** */
 .novedades-section {
     background: rgba(255,255,255,0.02);
     margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .novedades-title {
     font-family: var(--font-body), sans-serif;
@@ -435,5 +513,64 @@ footer button:hover {
     font-weight: 700;
     margin-bottom: 18px;
     margin-top: 0;
-    text-align: left;
+    text-align: center;
+}
+
+#novedades-contenedor {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.novedades-section .card {
+    background-color: white !important;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.novedades-section .card-img-top {
+    object-fit: cover;
+    background: #fff;
+    width: 100%;
+    height: 270px;
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.novedades-section .card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent !important;
+}
+
+.card-title {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.card-text {
+  font-family: var(--font-Beatrice), serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    #novedades-contenedor {
+        max-width: 98vw;
+    }
+    .novedades-section .card-img-top {
+        height: 180px;
+        border-radius: 5px 5px 0 0;
+    }
+}
+@media (max-width: 576px) {
+    .novedades-section .card-img-top {
+        height: 140px;
+    }
 }

@@ -1,9 +1,18 @@
-.login-box {
+/*.login-box {
     border: 2px solid #ccc;
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    border-radius: 0; /* o personaliza */
+    border-radius: 0; 
+}*/
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
 }
 
 .caption-style {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio de Sesion</title>
+    <link rel="icon" href="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" type="image/png">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -28,7 +29,7 @@
                 <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo" class="img-fluid">
             </div>
             <div class="col-12 col-md-8 login-box">
-                <h1 class="caption-style mb-4">INICIAR SESION</h1>
+                <h1 class="rubik-style" style="text-align: center;padding-bottom: 15px;">INICIAR SESIÓN</h1>
 
                 <form id="contactForm" class="login-form">
 
@@ -51,17 +52,50 @@
 
                     <div class="divider">
                         <hr>
-                        <span>OR</span>
+                        <span>O</span>
                         <hr>
                     </div>
 
-                    <button type="button" class="btn btn-gray-cool btn-create " data-bs-toggle="modal" data-bs-target="#registerModal">
-                        <a href="crear_cuenta.html" style="text-decoration: none; color: inherit;">CREAR UNA CUENTA</a>
+                    <button type="button" class="btn btn-gray-cool btn-create" onclick="location.href='crear_cuenta.html'">
+                        CREAR UNA CUENTA
                     </button>
                 </form>
             </div>
         </div>
     </main>
+
+    <!-- Modal Olvidé la contraseña -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+
+            <form id="forgotPasswordForm">
+
+                <div class="d-flex align-items-center mb-3">
+                <button type="button" class="btn btn-link p-0 me-3" data-bs-dismiss="modal" aria-label="Regresar" 
+                    style="font-size: 2.5rem; line-height: 1; color: inherit; text-decoration: none;">
+                    ←
+                </button> <br>
+                <h4 id="forgotPasswordModalLabel" class="mb-0" style="margin-left: 0.5rem;">RESTABLECER SU CONTRASEÑA</h4>
+                </div>
+
+                <div class="mb-3">
+                <label for="emailRecovery" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="emailRecovery" name="emailRecovery" placeholder="Ingresa tu correo" required>
+                </div>
+
+                <div id="forgotPasswordMessage" class="alert d-none" role="alert"></div>
+
+                <button type="submit" class="btn btn-gray-cool w-100" style="max-width: 100%; margin: 0 auto;">
+                Enviar
+                </button>
+
+            </form>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="mt-auto"></footer>

@@ -13,7 +13,7 @@ if (!producto) {
         <div class="row text-center align-items-stretch">
             <!-- Imagen grande -->
             <div class="col-md-5 d-flex justify-content-center align-items-start">
-                <img id="imagen-principal" src="${producto.imagenes[0]}" alt="${producto.producto}" class="img-fluid border rounded" style="max-height: 500px;">
+                <img id="imagen-principal" src="${producto.imagenes[0]}" alt="${producto.producto}" class="img-fluid" style="max-height: 500px; border-radius:20px;">
             </div>
 
             <!-- Miniaturas -->
@@ -25,6 +25,18 @@ if (!producto) {
 
             <!-- Detalles del producto -->
             <div class="col-md-4 text-start d-flex flex-column" id="detalle-recuadro">
+                <div class="d-flex justify-content-end">
+                    <button id="btn-favorito" class="btn p-0 border-0 bg-transparent">
+                        <svg id="icono-favorito" xmlns="http://www.w3.org/2000/svg" width="32" height="32" 
+                            fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+                                    4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+                                    19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                                    6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </button>
+                </div>
                 <div>
                     <h4 class="fw-bold">${producto.producto}</h4>
                     <p class="text-muted">${producto.precio.toLocaleString("es-MX", {
@@ -49,7 +61,7 @@ if (!producto) {
                             class="mb-2 d-block small text-center text-reset text-decoration-none" 
                             data-bs-toggle="modal" 
                             data-bs-target="#modalGuiaTallas">
-                            Encuentra tu talla | Guía de tallas
+                            Guía de tallas
                         </a>
                         <button id="btn-agregar" class="add-to-cart btn btn-gray-cool no-radius">
                             <span>AGREGAR</span>
@@ -203,6 +215,34 @@ if (!producto) {
                 { morphSVG: 'M4.99997 3L8.99997 1.5C8.99997 1.5 10.6901 3 12 3C13.3098 3 15 1.5 15 1.5L19 3L22.5 8L19.5 10.5L19 9.5L17.1781 18.6093C17.062 19.1901 16.778 19.7249 16.3351 20.1181C15.4265 20.925 13.7133 22.3147 12 23C10.2868 22.3147 8.57355 20.925 7.66487 20.1181C7.22198 19.7249 6.93798 19.1901 6.82183 18.6093L4.99997 9.5L4.5 10.5L1.5 8L4.99997 3Z', duration: 0, delay: 1.25 }
             ]
         });
+    });
+
+    // Evento para botón de favoritos
+    const btnFavorito = document.getElementById("btn-favorito");
+
+    // Cargar IDs guardados en favoritos
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    // Si el id del producto ya está guardado, marcar como activo
+    if (favoritos.some(fav => fav.id === producto.id)) {
+        btnFavorito.classList.add("active");
+    }
+
+    btnFavorito.addEventListener("click", () => {
+        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+        if (favoritos.some(fav => fav.id === producto.id)) {
+            // Si ya estaba, lo quitamos
+            favoritos = favoritos.filter(fav => fav.id !== producto.id);
+            btnFavorito.classList.remove("active");
+        } else {
+            // Si no estaba, lo agregamos
+            favoritos.push({id: producto.id});
+            btnFavorito.classList.add("active");
+        }
+
+        // Guardar solo los IDs
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
     });
 
 
