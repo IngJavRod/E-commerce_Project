@@ -79,10 +79,10 @@ function renderizarProductos(productosLista) {
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#" class="text-decoration-none text-dark d-block h-100 producto-link" data-id="${producto.id}">
                     <div class="card h-100" data-imagenes='${imagenesData}' 
-                        style="width: 100%; height: 100%; background-color: white; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
+                        style="width: 100%; height: 100%; background-color: white; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
                         
                         <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.producto}" 
-                            style="height: 300px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            style="height: 300px; object-fit: fill; border-top-left-radius: 10px; border-top-right-radius: 10px;">
 
                         <div class="card-body" 
                             style="display: flex; flex-direction: column; flex-grow: 1; background-color: white; padding: 1rem;">

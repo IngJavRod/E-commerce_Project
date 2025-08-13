@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras</title>
+    <link rel="icon" href="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" type="image/png">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,9 +38,9 @@
                     </div>
 
                     <!-- Resumen de compra -->
-                    <div class="col-12 col-lg-4">
-                        <br><br><br> 
-                        <div class="card tarjeta shadow-sm p-4">
+                    <div class="col-12 col-lg-4 cuadro-pago">
+                        <br>
+                        <div class="tarjeta shadow-sm p-4">
                             <h4 class="mb-3">RESUMEN DE COMPRA</h4>
                             <div class="d-flex justify-content-between mb-2">
                                 <span class="fw-bold">TOTAL:</span>
@@ -48,12 +49,14 @@
                             <hr>
                             <label>
                                 <input type="checkbox" id="aceptar-terminos" name="terminos" required>
-                                Acepto los <a href="#" target="_blank" class="box">Términos y Condiciones</a> <br><br>
+                                Acepto los <a href="/html/terminos_condiciones.html" target="_blank" class="box">Términos y Condiciones</a> <br><br>
                             </label>
                             <button id="finalizar-compra" class="btn btn-gray-cool w-100">
                                 FINALIZAR COMPRA
                             </button>
+                            
                         </div>
+                        <br>
                     </div>
                 </div>
             </section>
