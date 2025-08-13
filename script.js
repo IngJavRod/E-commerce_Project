@@ -75,7 +75,7 @@ function createFooter() {
                 <ul class="list-unstyled">
                     <li><a href="/html/sobre_nosotros.html">Sobre nosotros</a></li>
                     <li><a href="/html/contacto.html">Contáctanos</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="/html/terminos_condiciones.html">Términos y condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-section contacto-section">

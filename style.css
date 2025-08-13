@@ -35,7 +35,7 @@ h2 { font-family: var(--font-body); font-weight: 700; }
 h3 { font-family: var(--font-special); font-weight: 400; }
 h4 { font-family: var(--font-caption); font-weight: 700; }
 
-p, li, span, a, footer, section, div {
+p, li, span, a, footer, section, div, label {
     font-family: var(--font-Beatrice);
     font-weight: 400;
 }
