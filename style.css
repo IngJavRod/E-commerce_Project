@@ -57,7 +57,7 @@ p, li, span, a, footer, section, div, label {
 }
 
 .navbar-brand img {
-    height: 100px;
+    height: 90px;
     margin-top: 10px;
     margin-bottom: -20px;
 }
@@ -105,6 +105,7 @@ p, li, span, a, footer, section, div, label {
     justify-content: center;
     flex-grow: 1;
     height: 100px;
+    margin-bottom: -5px;
 }
 
 .navbar-right {
