@@ -64,12 +64,10 @@ function createFooter() {
             </div>
             <div class="footer-section">
                 <h4 class="p-0">Categorías</h4>
-                <ul class="">
+                <ul>
                     <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="/html/productos.html">Productos</a></li>
-                    <li><a href="#">Accesorios</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Descuentos</a></li>
+                    <li><a href="/html/favoritos.html">Favoritos</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -78,7 +76,6 @@ function createFooter() {
                     <li><a href="/html/sobre_nosotros.html">Sobre nosotros</a></li>
                     <li><a href="/html/contacto.html">Contáctanos</a></li>
                     <li><a href="/html/terminos_condiciones.html">Términos y condiciones</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
                 </ul>
             </div>
             <div class="footer-section contacto-section">
@@ -129,21 +126,20 @@ function createFooter() {
         </div>
 
         <!-- Formulario de suscripción -->
-        <div class="text-center mt-4">
+        <div class="text-center mt-2 mb-2">
             <form class="d-flex justify-content-center flex-wrap">
-                <div class="input-group" style="max-width: 600px;">
-                <input type="email" class="form-control no-radius  text-center" padding="" placeholder="Tu correo electrónico" required style = "width: 300px">
-                <button type="submit" class="btn btn-gray-cool no-radius">Suscribirse</button>
+                <div class="input-group" style="max-width: 400px;">
+                <input type="email" class="form-control no-radius text-center" placeholder="Tu correo electrónico" required style="width: 180px; font-size: 0.95rem;">
+                <button type="submit" class="btn btn-gray-cool no-radius" style="padding:7px 16px; font-size:0.95rem;">Suscribirse</button>
                 </div>
             </form>
         </div>
 
-
         <!-- Línea blanca -->
-        <hr style="border-top: 2px solid white; margin: 2rem auto; width: 90%; max-width: 1200px;">
+        <hr style="border-top: 1px solid white; margin: 1rem auto 0.5rem auto; width: 85%; max-width: 900px;">
 
         <!-- Derechos -->
-        <p class="store-name text-center text-white mb-0">&copy; ${new Date().getFullYear()} The King Tiger. Todos los derechos reservados.</p>
+        <p class="store-name text-center text-white mb-1" style="margin-top: 0.5rem;">&copy; ${new Date().getFullYear()} The King Tiger. Todos los derechos reservados.</p>
     </footer>
     `;
 
