@@ -112,3 +112,8 @@
 .box{
     color: #000;
 }
+/* Modifica el tamaño de la x */
+.eliminar-item {
+    font-size: 3rem;  /* más grande */
+    line-height: 1;
+}
