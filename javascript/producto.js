@@ -13,7 +13,7 @@ if (!producto) {
         <div class="row text-center align-items-stretch">
             <!-- Imagen grande -->
             <div class="col-md-5 d-flex justify-content-center align-items-start">
-                <img id="imagen-principal" src="${producto.imagenes[0]}" alt="${producto.producto}" class="img-fluid border rounded" style="max-height: 500px;">
+                <img id="imagen-principal" src="${producto.imagenes[0]}" alt="${producto.producto}" class="img-fluid" style="max-height: 500px; border-radius:20px;">
             </div>
 
             <!-- Miniaturas -->
