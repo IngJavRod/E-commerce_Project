@@ -1,11 +1,11 @@
 /* Contenedor general con borde redondeado y sombra */
 .login-box {
     background-color: #fff;
-    padding: 40px;
+    padding: 5px 40px 20px 40px; /* top right bottom left */
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 /* Estilo del título */
