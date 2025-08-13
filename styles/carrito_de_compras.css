@@ -117,3 +117,7 @@
     font-size: 3rem;  /* más grande */
     line-height: 1;
 }
+
+.cuadro-pago {
+    margin-top: 100px; /* o el valor que necesites */
+}
