@@ -28,7 +28,7 @@ export const productos = [
     },
     {
         id: 3,
-        producto: 'Playera "aventuras de una mosca"',
+        producto: 'Playera con estampado',
         imagenes: [
             "https://i.postimg.cc/1X6qWB7n/2.jpg",
             "https://i.postimg.cc/SsH973db/2-3.jpg",
@@ -51,7 +51,8 @@ export const productos = [
         descripcion: "Pantalon estilo jogger buena calidad",
         tallas: ["S", "M", "L"],
         precio: 450,
-        categoria: "Pantalones"
+        categoria: "Pantalones",
+        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
     },
     {
         id: 5,
@@ -103,8 +104,8 @@ export const productos = [
         descripcion: "Sudadera con capucha negra con logo, 100% algodón",
         tallas: ["S", "M", "L"],
         precio: 600,
-        categoria: "Sudaderas",
-        isNew: true // indica si el producto es nuevo y mandarlo a llamar de pagina principal
+        categoria: "Sudaderas"
+        
     },
     {
         id: 9,
