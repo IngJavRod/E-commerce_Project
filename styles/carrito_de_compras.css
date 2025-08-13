@@ -2,9 +2,19 @@
 
 /* Borde redondeado para la tabla */
 #carrito-productos .table {
-    border-radius: 0px;
+    /*border-radius: 0px;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;*/
+}
+
+.cuadro-pago {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+ 
+    max-height:fit-content;
+    
 }
 
 /* Filas */
