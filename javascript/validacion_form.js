@@ -1,4 +1,4 @@
-document.getElementById('productoForm').addEventListener('submit', function (e) {
+document.getElementById('productoForm').addEventListener('submit', async function (e) {
     e.preventDefault(); // Evita que se envíe el formulario
 
     const nombre = document.getElementById('nombreProducto').value.trim();
@@ -6,7 +6,7 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
     const categoriasCheckbox = document.querySelectorAll('input[name="categoria"]');
     const precio = document.getElementById('precioProducto').value.trim();
     const descripcion = document.getElementById('descripcionProducto').value.trim();
-    const url = document.getElementById('imagenesProducto').value.trim();
+    const archivosImagenes = document.getElementById('imagenArchivo').files;
     const tallaCH = document.getElementById('tallaCH').value.trim();
     const tallaM = document.getElementById('tallaM').value.trim();
     const tallaG = document.getElementById('tallaG').value.trim();
@@ -33,7 +33,7 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
 
     //if (precio === '' || isNaN(precio) || Number(precio) <= 0) errores.push("El precio debe ser un número válido mayor que 0.");
     if (descripcion.length < 10) errores.push("La descripción debe tener al menos 10 caracteres.");
-    if (!url.match(/^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)$/i)) errores.push("La URL debe ser válida y apuntar a una imagen.");
+    if (archivosImagenes.length === 0) errores.push("Debes subir al menos una imagen.");
 
     mostrarErrores(errores);
 
@@ -64,10 +64,13 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
         }else{
           ut = Number(unitalla)
         }
-
-        const producto = {
+        
+        try{
+          // Subir imágenes a Cloudinary
+          const urlsImagenes = await subirVariasImagenesCloudinary(archivosImagenes);
+          const producto = {
             nombre,
-            imagenes: url.split(',').map(img => img.trim()),
+            imagenes: urlsImagenes,
             descripcion,
             tallaCH: Number(ch),
             tallaM: Number(m),
@@ -76,17 +79,22 @@ document.getElementById('productoForm').addEventListener('submit', function (e) 
             // tallas.split(',').map(talla => talla.trim()),
             precio: Number(precio),
             categorias: categoriasSeleccionadas
-        };
+          };
+          // Mostrar en consola 
+          console.log("Producto creado:", JSON.stringify(producto, null, 2));
+          //Mostrar mensaje en el modal
+          document.getElementById("modalMessage").innerText = "Producto guardado exitosamente.";
+          new bootstrap.Modal(document.getElementById("responseModal")).show()
+          // Opcional: limpiar el formulario
+          document.getElementById("productoForm").reset();
+        } catch (error) {
+          mostrarErrores(["Error al subir imágenes: " + error.message]);
+        }
 
-        // Mostrar en consola 
-        console.log("Producto creado:", JSON.stringify(producto, null, 2));
+        
+        
 
-        //Mostrar mensaje en el modal
-        document.getElementById("modalMessage").innerText = "Producto guardado exitosamente.";
-        new bootstrap.Modal(document.getElementById("responseModal")).show();
-
-        // Opcional: limpiar el formulario
-        document.getElementById("productoForm").reset();
+        
     }
 });
 
@@ -120,3 +128,33 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.classList.add('was-validated');
   });
 });
+
+
+//Sube las fotos a cloudinary
+async function subirVariasImagenesCloudinary(files) {
+  const urlCloudinary = "https://api.cloudinary.com/v1_1/dxxk8zhoi/image/upload";
+  const upload_preset = "preset_public";
+
+  const urls = [];
+
+  for (const file of files) {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", upload_preset);
+
+    const respuesta = await fetch(urlCloudinary, {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await respuesta.json();
+
+    if (data.secure_url) {
+      urls.push(data.secure_url);
+    } else {
+      throw new Error("Error al subir la imagen " + file.name);
+    }
+  }
+
+  return urls;
+}
