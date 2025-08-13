@@ -61,7 +61,7 @@ if (!producto) {
                             class="mb-2 d-block small text-center text-reset text-decoration-none" 
                             data-bs-toggle="modal" 
                             data-bs-target="#modalGuiaTallas">
-                            Encuentra tu talla | Guía de tallas
+                            Guía de tallas
                         </a>
                         <button id="btn-agregar" class="add-to-cart btn btn-gray-cool no-radius">
                             <span>AGREGAR</span>
