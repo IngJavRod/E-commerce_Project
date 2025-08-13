@@ -15,6 +15,7 @@
 		rel="stylesheet">
 	<!-- Estilo externo -->
 	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../styles/formularioProductos.css">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 					<form id="productoForm">
 						<div class="mb-3">
 							<label for="nombreProducto" class="form-label">Nombre del producto:</label>
-							<input type="text" class="form-control" id="nombreProducto" name="nombre" required/>
+							<input type="text" class="form-control" id="nombreProducto" name="nombre" required />
 							<div class="invalid-feedback">Este campo es obligatorio</div>
 
 						</div>
@@ -45,20 +46,35 @@
 							<textarea type="text" class="form-control" id="descripcionProducto"
 								name="descripcion"></textarea>
 						</div>
-						<div class="mb-3">
+						<div clas>
+							<label for="stock-tallas"> Stock y tallas</label>
+							<div class="grid-tallas" id="stock-tallas">
+								<label for="ch">CH</label>
+								<label for="m">M</label>
+								<label for="g">G</label>
+								<label for="ut">Unitalla</label>
+
+								<input type="number" id="tallaCH" name="ch" min="0">
+								<input type="number" id="tallaM" name="m" min="0">
+								<input type="number" id="tallaG" name="g" min="0">
+								<input type="number" id="unitalla" name="ut" min="0">
+							</div>
+
+						</div>
+						<!-- <div class="mb-3">
 							<label for="tallasProducto" class="form-label">Tallas Disponibles (S, M ,L, etc. separadas
 								por coma):
 							</label>
-							<input type="text" class="form-control" id="tallasProducto" name="tallas" required/>
-						</div>
+							<input type="text" class="form-control" id="tallasProducto" name="tallas" required />
+						</div> -->
 						<div class="mb-3">
 							<label for="precioProducto" class="form-label">Precio del Producto (MXN):</label>
-							<input type="number" class="form-control" id="precioProducto" name="precio" required/>
+							<input type="number" class="form-control" id="precioProducto" name="precio" required />
 						</div>
 						<div class="mb-3">
 							<label class="form-label" id="categorias">Categorías:</label><br>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="categoria" value="Pantalones"
+								<input class="form-check-input" type="checkbox" name="categoria" value="Playeras"
 									id="catPlayeras">
 								<label class="form-check-label" for="catPlayeras">Playeras</label>
 							</div>
