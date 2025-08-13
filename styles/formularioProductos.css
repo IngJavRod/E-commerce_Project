@@ -1,0 +1,28 @@
+.grid-tallas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 12px; /* Espaciado entre columnas y filas */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.grid-tallas label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.grid-tallas input[type="number"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.grid-tallas input[type="number"]:focus {
+  border-color: #007bff;
+}
