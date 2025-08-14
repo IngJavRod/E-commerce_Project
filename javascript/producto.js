@@ -73,12 +73,16 @@ function renderProducto(producto) {
                     <div class="mb-3">
                         <p class="mb-2 fw-bold">Tallas:</p>
                         <div id="tallas" class="d-flex flex-wrap gap-2">
-                            ${["chica", "mediana", "grande", "unitalla"]
-                                .filter(t => producto[t] > 0) // mostrar solo tallas con stock
-                                .map(talla => {
-                                    let label = talla.charAt(0).toUpperCase() + talla.slice(1); 
-                                    return `<button class="btn btn-outline-dark btn-sm talla-btn">${label}</button>`;
-                                }).join('')}
+                            ${
+                                ["chica", "mediana", "grande", "unitalla"].filter(t => producto[t] > 0).length > 0
+                                ? ["chica", "mediana", "grande", "unitalla"]
+                                    .filter(t => producto[t] > 0)
+                                    .map(talla => {
+                                        let label = talla.charAt(0).toUpperCase() + talla.slice(1); 
+                                        return `<button class="btn btn-outline-dark btn-sm talla-btn">${label}</button>`;
+                                    }).join('')
+                                : `<p class="text-danger"><strong>No hay stock</strong></p>`
+                            }
                         </div>
                     </div>
 

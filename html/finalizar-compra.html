@@ -24,9 +24,11 @@
 
     <!-- Contenido principal -->
     <main class="container py-4">
-        <section>
-                <div class="card col-12 col-md-6 login-box p-4" style="background-color: white; border-radius: 15px;">
-                    <h1 class="rubik-style"  style="text-align: center; padding-bottom: 20px;" class="caption-style mb-4">DATOS DEL COMPRADOR</h1>
+        <div class="row g-4">
+            <!-- Columna izquierda: Datos del comprador -->
+            <div class="col-12 col-md-6">
+                <div class="card p-4" style="background-color: white; border-radius: 15px;">
+                    <h1 class="rubik-style text-center mb-4">DATOS DEL COMPRADOR</h1>
                     <form class="login-form">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -79,33 +81,39 @@
                             </div>
                             <div class="mb-3">
                                 <label for="numeroTarjeta" class="form-label">Número de tarjeta</label>
-                                <input type="text" class="form-control" id="numeroTarjeta"
-                                    placeholder="**** **** **** ****">
+                                <input type="text" class="form-control" id="numeroTarjeta" placeholder="**** **** **** ****">
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="mes" class="form-label">Fecha de vencimiento</label>
                                     <div class="d-flex align-items-center">
-                                        <input type="text" class="form-control text-center" id="mes"
-                                            name="mes" placeholder="MM" maxlength="2"
-                                            pattern="^(0[1-9]|1[0-2])$" required style="width: 60px;">
+                                        <input type="text" class="form-control text-center" id="mes" placeholder="MM" maxlength="2" style="width: 60px;">
                                         <span class="mx-2">/</span>
-                                        <input type="text" class="form-control text-center" id="anio"
-                                            name="anio" placeholder="AA" maxlength="2" pattern="^\d{2}$"
-                                            required style="width: 60px;">
+                                        <input type="text" class="form-control text-center" id="anio" placeholder="AA" maxlength="2" style="width: 60px;">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="cvv" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="cvv" maxlength="4"
-                                        placeholder="***">
+                                    <input type="text" class="form-control" id="cvv" maxlength="4" placeholder="***">
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-        </section>
+            </div>
+
+            <!-- Columna derecha: Resumen de compra -->
+            <div class="col-12 col-md-6">
+                <div class="card p-4" style="background-color: white; border-radius: 15px;">
+                    <h2 class="text-center rubik-style mb-4">RESUMEN DE COMPRA</h2>
+                    <div id="resumen-compra">
+                        <!-- Aquí JS renderizará los productos, cantidades y total -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
 
     <!-- Footer -->
     <footer class="mt-auto"></footer>
@@ -118,7 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script Local -->
-    <script type="module" src="../javascript/carrito_de_compras.js"></script>
+    <script type="module" src="../javascript/finalizar-compra.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>
