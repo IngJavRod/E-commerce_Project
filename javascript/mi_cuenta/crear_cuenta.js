@@ -14,40 +14,44 @@ document.addEventListener("DOMContentLoaded", () => {
             : '<i class="bi bi-eye-slash"></i>';
     });
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         // Limpiar errores anteriores
         limpiarError();
 
         // Obtener los valores del formulario
-        const nombre = document.getElementById("name").value.trim();
-        const apellidos = document.getElementById("lastname").value.trim();
-        const correo = document.getElementById("correo").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
-        const contraseña = passwordInput.value.trim();
+        const nombreInput = document.getElementById("name").value.trim();
+        const apellidosInput = document.getElementById("lastname").value.trim();
+        const correoInput = document.getElementById("correo").value.trim();
+        const telefonoInput = document.getElementById("telefono").value.trim();
+        const contrasenaInput = passwordInput.value.trim();
+
+        //End-Point del Back-end
+        const API_URL = `http://localhost:8080/db/v1/thekingtiger/agregar-cliente`;
+
 
         // Validación de campos vacíos
-        if (!nombre || !apellidos || !correo || !telefono || !contraseña) {
+        if (!nombreInput || !apellidosInput || !correoInput || !telefonoInput || !contrasenaInput) {
             mostrarError("Todos los campos son obligatorios.");
             return;
         }
 
         // Validación de formato de correo
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(correo)) {
+        if (!emailRegex.test(correoInput)) {
             mostrarError("El correo no es válido.");
             return;
         }
 
         // Validación de longitud de contraseña
-        if (contraseña.length < 5) {
+        if (contrasenaInput.length < 5) {
             mostrarError("La contraseña debe tener al menos 5 caracteres.");
             return;
         }
 
         // Validación de teléfono
-        if (!/^\d{10}$/.test(telefono)) {
+        if (!/^\d{10}$/.test(telefonoInput)) {
             mostrarError("El teléfono debe contener exactamente 10 dígitos.");
             return;
         }
@@ -56,27 +60,49 @@ document.addEventListener("DOMContentLoaded", () => {
         const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
         // Verificar si el correo ya está registrado
-        const correoExistente = usuarios.find(u => u.correo === correo);
+        const correoExistente = usuarios.find(u => u.correoInput === correoInput);
         if (correoExistente) {
             mostrarError("El correo ya está registrado.");
             return;
         }
 
         // Crear nuevo usuario
-        const nuevoUsuario = {
-            nombre,
-            apellidos,
-            correo,
-            telefono,
-            contraseña
+        const clientes = {
+            nomCliente: nombreInput,
+            apellidoCliente: apellidosInput,
+            correoCliente: correoInput,
+            telefonoCliente: telefonoInput,
+            passwordCliente: contrasenaInput
         };
+        try{
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(clientes)
+            });
+            if(res.status === 409){
+                mostrarError("El correo ya está registrado en el sistema.");
+                return;
+            }
+            if (!res.ok){
+                throw new Error(`Error en la peticion: ${res.status}`);
+            }
+            
+            const savedUser = await res.json();
+            console.log('Usuario registrado:', savedUser);
 
-        usuarios.push(nuevoUsuario);
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            alert("Cuenta creada con éxito. Ahora puedes iniciar sesión.");
+            form.reset();
+            window.location.href = "inicio_de_sesion.html"; 
+        }catch(err){
+            console.error(err);
+            alert('Hubo un error al registrar el usuario.');
+        }
 
-        alert("Cuenta creada con éxito. Ahora puedes iniciar sesión.");
-        form.reset();
-        window.location.href = "inicio_de_sesion.html"; // Asegúrate que esta ruta sea correcta
+
+        
     });
 });
 

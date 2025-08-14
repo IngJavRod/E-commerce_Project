@@ -112,3 +112,16 @@
 .box{
     color: #000;
 }
+/* Modifica el tamaño de la x */
+.eliminar-item {
+    font-size: 3rem;  /* más grande */
+    line-height: 1;
+}
+
+.cuadro-pago {
+    margin-top: 100px; /* o el valor que necesites */
+}
+
+#finalizar-compra {
+    border-radius: 10px  !important; /* Ajusta el valor para más o menos redondeo */
+}

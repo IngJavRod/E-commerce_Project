@@ -33,35 +33,33 @@
                 <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo" class="img-fluid">
             </div>
             <div class="col-12 col-md-8 login-box">
-                <button id="btn-regresar" 
+                <button id="btn-regresar"
                     style="border: none; background: transparent; font-size: 3rem; cursor: pointer; margin-bottom: 0.5rem;"
                     aria-label="Regresar">
-                    ← 
+                    ←
                 </button>
-                <h1 class="caption-style mb-4">CREAR CUENTA</h1>
+                <h1 class="rubik-style" style="text-align: center;padding-bottom: 5px;">CREAR CUENTA</h1>
 
-                <!-- Contenedor para errores -->
-                <div id="errorContainer" class="alert alert-danger d-none"></div>
 
                 <form id="contactForm" class="login-form">
-                    <div class="mb-4 text-start">
+                    <div class="mb-2 text-start">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
                     </div>
-                    <div class="mb-4 text-start">
+                    <div class="mb-2 text-start">
                         <label for="lastname" class="form-label">Apellidos</label>
                         <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos">
                     </div>
-                    <div class="mb-4 text-start">
+                    <div class="mb-2 text-start">
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo">
                     </div>
-                    <div class="mb-4 text-start">
+                    <div class="mb-2 text-start">
                         <label for="telefono" class="form-label">Teléfono</label>
                         <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"
                             pattern="[0-9]{10}" maxlength="10" title="Debe contener exactamente 10 dígitos numéricos">
                     </div>
-                    <div class="mb-4 text-start position-relative">
+                    <div class="mb-2 text-start position-relative">
                         <label for="Contraseña" class="form-label">Contraseña</label>
                         <div class="input-group">
                             <input type="password" class="form-control" id="Contraseña" name="Contraseña"
@@ -71,7 +69,8 @@
                             </button>
                         </div>
                     </div>
-
+                    <!-- Contenedor para errores -->
+                    <div id="errorContainer" class="alert alert-danger d-none"></div>
                     <button type="submit" class="btn btn-login">CREAR CUENTA</button>
                 </form>
             </div>

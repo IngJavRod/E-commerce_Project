@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         Swal.fire({
-            title: "¡Gracias por tu compra!",
+            title: "Carrito confirmado",
             icon: "success",
             confirmButtonText: "Aceptar"
         }).then(() => {

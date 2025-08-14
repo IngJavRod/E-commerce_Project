@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi cuenta</title>
+    <link rel="icon" href="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rubik+Beastly&display=swap" rel="stylesheet" />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styles/mi_cuenta.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header></header>
+
+    <!-- Contenido principal -->
+    <main class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm p-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Avatar" class="rounded-circle me-3" width="80" height="80">
+                        <div>
+                            <h3 id="nombre-usuario" class="mb-0">Nombre Apellido</h3>
+                            <small class="text-muted" id="correo-usuario">correo@ejemplo.com</small>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item"><i class="bi bi-telephone-fill me-2"></i> <span id="telefono-usuario">+52 55 1234 5678</span></li>
+                        <li class="list-group-item"><i class="bi bi-geo-alt-fill me-2"></i> <span id="direccion-usuario">Calle Falsa 123, Ciudad, País</span></li>
+                    </ul>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-gray-cool" id="editar-datos">
+                            <i class="bi bi-pencil-square me-1"></i>Editar Datos
+                        </button>
+                        <button class="btn btn-gray-cool" id="cerrar-sesion">
+                            <i class="bi bi-box-arrow-right me-1"></i>Cerrar Sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Editar Datos -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalEditarLabel">Editar Información</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="form-editar">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="correo" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono">
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion">
+                </div>
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="submit" form="form-editar" class="btn btn-gray-cool">
+                <i class="bi bi-save me-1"></i> Guardar cambios
+                </button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="mt-auto"></footer>
+    
+    <!-- Script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- Script Local -->
+    <script type="module" src="../../javascript/mi_cuenta/mi_cuenta.js"></script>
+    <!-- Script externo -->
+    <script src="../../script.js"></script>
+
+
+</body>
+</html>

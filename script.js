@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     createFooter()
     createNavbar()
+
+    // Ajustar el enlace del icono de usuario según sesión
+    const idCliente = localStorage.getItem("idCliente");
+    const iconoUsuario = document.querySelector(".navbar-right .bi-person").parentElement;
+    
+    if (idCliente) {
+        iconoUsuario.href = "/html/mi_cuenta/mi_cuenta.html";
+    } else {
+        iconoUsuario.href = "/html/mi_cuenta/inicio_de_sesion.html";
+    }
 })
 
 // Función para crear el Navbar
@@ -20,7 +30,7 @@ function createNavbar() {
                 <!-- CENTRO: Logo -->
                 <div class="navbar-center d-flex justify-content-center align-items-center flex-grow-1" style="height: 100px;">
                     <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="../../index.html" style="line-height: 0;">
-                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
+                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar"  width="100" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
                     </a>
                 </div>
 
