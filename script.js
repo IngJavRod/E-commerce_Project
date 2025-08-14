@@ -20,7 +20,7 @@ function createNavbar() {
                 <!-- CENTRO: Logo -->
                 <div class="navbar-center d-flex justify-content-center align-items-center flex-grow-1" style="height: 100px;">
                     <a class="navbar-brand d-flex align-items-center justify-content-center m-0 p-0" href="../../index.html" style="line-height: 0;">
-                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
+                        <img src="https://i.postimg.cc/NGdNKDVM/logo-navbar.png" alt="Logo Navbar"  width="100" height="50" style="display: block; margin: 0 auto; vertical-align: middle;">
                     </a>
                 </div>
 
