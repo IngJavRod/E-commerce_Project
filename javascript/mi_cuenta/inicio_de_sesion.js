@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const email = document.getElementById("correo").value.trim();
@@ -19,22 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Validación para usuarios registrados
-        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-        const usuario = usuarios.find(u => u.correo === email);
+        try {
+            const response = await fetch("http://localhost:8080/db/v1/thekingtiger/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    correoCliente: email,
+                    passwordCliente: password
+                })
+            });
 
-        if (!usuario) {
-            alert("Correo no registrado ❌");
-            return;
+            if (response.status === 404) {
+                alert("Correo no registrado ❌");
+                return;
+            }
+            if (response.status === 401) {
+                alert("Contraseña incorrecta ❌");
+                return;
+            }
+
+            const usuario = await response.json();
+            alert(`¡Bienvenido, ${usuario.nomCliente}! ✅`);
+            window.location.href = "/index.html";
+        } catch (error) {
+            console.error("Error en login:", error);
+            alert("No se pudo conectar al servidor ❌");
         }
-
-        if (usuario.contraseña !== password) {
-            alert("Contraseña incorrecta ❌");
-            return;
-        }
-
-        alert(`¡Bienvenido, ${usuario.nombre}! Has iniciado sesión correctamente ✅`);
-        window.location.href = '/index.html';
     });
 
     const forgotModal = document.getElementById('forgotPasswordModal');
