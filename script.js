@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     createFooter()
     createNavbar()
+
+    // Ajustar el enlace del icono de usuario según sesión
+    const idCliente = localStorage.getItem("idCliente");
+    const iconoUsuario = document.querySelector(".navbar-right .bi-person").parentElement;
+    
+    if (idCliente) {
+        iconoUsuario.href = "/html/mi_cuenta/mi_cuenta.html";
+    } else {
+        iconoUsuario.href = "/html/mi_cuenta/inicio_de_sesion.html";
+    }
 })
 
 // Función para crear el Navbar

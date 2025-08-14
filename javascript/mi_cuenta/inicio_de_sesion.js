@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const usuario = await response.json();
             alert(`¡Bienvenido, ${usuario.nomCliente}! ✅`);
-            window.location.href = "/index.html";
+            const idCliente = localStorage.setItem("idCliente", usuario.idClientes);
+            const nomCliente = localStorage.setItem('nombreCliente', usuario.nomCliente);
+            window.location.href = "./mi_cuenta.html";
         } catch (error) {
             console.error("Error en login:", error);
             alert("No se pudo conectar al servidor ❌");
