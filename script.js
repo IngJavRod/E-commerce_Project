@@ -92,7 +92,7 @@ function createFooter() {
                 <h4>Información de contacto</h4>
                 <ul class="list-unstyled">
                     <li>Teléfono: +44 55 1728 0466</li>
-                    <li>Correo: angeles.ma_luna@hotmail.com</li>
+                    <li>Correo: info@thekingtiger.com</li>
                     <li>Dirección: Calle Principal #123</li>
                 </ul>
             </div>
