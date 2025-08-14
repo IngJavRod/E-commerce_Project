@@ -179,7 +179,7 @@ function renderProducto(producto) {
         }
 
         const productoCarrito = {
-            id: producto.id,
+            id: idProducto,
             talla: tallaSeleccionada.textContent
         };
 
