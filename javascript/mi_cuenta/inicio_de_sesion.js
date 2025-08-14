@@ -13,36 +13,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Validación especial para admin
-        if (email === 'admin@gmail.com' && password === '1234') {
-            alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
-            window.location.href = '../formularioProducto.html';
-            return;
-        }
+        // if (email === 'admin@gmail.com' && password === '1234') {
+        //     alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
+        //     window.location.href = '../formularioProducto.html';
+        //     return;
+        // }
+
+
+
+
+
+
+
 
         try {
-            const response = await fetch("http://localhost:8080/db/v1/thekingtiger/login", {
+            const responseAdmin = await fetch("http://localhost:8080/db/v1/thekingtiger/login-admin",{
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    correoCliente: email,
-                    passwordCliente: password
+                    correoAdmin: email,
+                    passwordAdmin: password
                 })
             });
 
-            if (response.status === 404) {
-                alert("Correo no registrado ❌");
-                return;
+            if (responseAdmin.status === 404){
+                const response = await fetch("http://localhost:8080/db/v1/thekingtiger/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        correoCliente: email,
+                        passwordCliente: password
+                    })
+                });
+
+                if (response.status === 404) {
+                    alert("Correo no registrado ❌");
+                    return;
+                }
+
+                if (response.status === 401) {
+                    alert("Contraseña incorrecta ❌");
+                    return;
+                }
+
+                const usuario = await response.json();
+                alert(`¡Bienvenido, ${usuario.nomCliente}! ✅`);
+                const idCliente = localStorage.setItem("idCliente", usuario.idClientes);
+                const nomCliente = localStorage.setItem('nombreCliente', usuario.nomCliente);
+                window.location.href = "./mi_cuenta.html";
+
             }
-            if (response.status === 401) {
+
+            
+
+            
+            if (responseAdmin.status === 401) {
                 alert("Contraseña incorrecta ❌");
                 return;
             }
 
-            const usuario = await response.json();
-            alert(`¡Bienvenido, ${usuario.nomCliente}! ✅`);
-            const idCliente = localStorage.setItem("idCliente", usuario.idClientes);
-            const nomCliente = localStorage.setItem('nombreCliente', usuario.nomCliente);
-            window.location.href = "./mi_cuenta.html";
+            alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
+            window.location.href = '../formularioProducto.html';
+            return;
+
+            
         } catch (error) {
             console.error("Error en login:", error);
             alert("No se pudo conectar al servidor ❌");
