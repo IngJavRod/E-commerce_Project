@@ -44,7 +44,7 @@ function renderizarProductos(productosLista) {
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">${producto.nomProd}</h5>
                         <p class="card-text small">${producto.descripcion}</p>
-                        <p class="fw-bold mt-auto">${precioFormateado}</p>
+                        <p class="fw-bold mt-auto text-center">${precioFormateado}</p>
                         <div class="d-flex justify-content-between mt-2">
                             <button class="btn btn-gray-cool btn-editar" data-id="${producto.idProductos}">Editar</button>
                             <button class="btn btn-gray-cool btn-eliminar" data-id="${producto.idProductos}">Eliminar</button>

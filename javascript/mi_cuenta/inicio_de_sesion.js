@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }else{
                 alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
-                window.location.href = '../formularioProducto.html';
+                window.location.href = '../gestor_productos.html';
                 return;
             }
 
