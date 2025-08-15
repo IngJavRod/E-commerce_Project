@@ -78,7 +78,7 @@ async function renderizarResumenCompra() {
     resumenContainer.innerHTML = '';
 
     for (let item of itemsFinales) {
-        const API_URL = `http://localhost:8080/db/v1/thekingtiger/productos/${item.id}`;
+        const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/productos/${item.id}`;
         try {
             const res = await fetch(API_URL, { headers: { 'Accept': 'application/json' } });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);

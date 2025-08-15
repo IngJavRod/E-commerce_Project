@@ -20,7 +20,7 @@ async function renderFavoritos() {
         const fav = favoritos[index];
 
         try {
-            const res = await fetch(`http://localhost:8080/db/v1/thekingtiger/productos/${fav.id}`, {
+            const res = await fetch(`http://18.218.198.81:8080/db/v1/thekingtiger/productos/${fav.id}`, {
                 headers: { 'Accept': 'application/json' }
             });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);

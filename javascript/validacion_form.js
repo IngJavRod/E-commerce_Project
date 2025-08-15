@@ -16,7 +16,7 @@ document.getElementById('productoForm').addEventListener('submit', async functio
         .filter(checkbox => checkbox.checked)
         .map(checkbox => checkbox.value);
 
-    const API_URL = `http://localhost:8080/db/v1/thekingtiger/agregar-producto`;
+    const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/agregar-producto`;
 
     let errores = [];
 

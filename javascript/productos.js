@@ -2,7 +2,7 @@ const contenedor = document.getElementById("contenedor-productos");
 const formBusqueda = document.getElementById("form-busqueda");
 const inputBusqueda = document.getElementById("busqueda-input");
     
-const API_URL = `http://localhost:8080/db/v1/thekingtiger/productos`;
+const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/productos`;
 
 
 (async function cargarProductos() {

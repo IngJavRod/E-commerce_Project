@@ -1,6 +1,6 @@
 const contenedor = document.getElementById("detalle-producto");
 const idProducto = parseInt(localStorage.getItem("productoSeleccionado"));
-const API_URL = `http://localhost:8080/db/v1/thekingtiger/productos/${idProducto}`;
+const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/productos/${idProducto}`;
 
 async function cargarProducto() {
     if (!idProducto) {

@@ -1,5 +1,5 @@
 const contenedor = document.getElementById("contenedor-productos");
-const API_URL = `http://localhost:8080/db/v1/thekingtiger/productos`;
+const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/productos`;
 
 // Guardamos los productos para poder editarlos
 window.listaProductos = [];

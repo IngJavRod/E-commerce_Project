@@ -1,5 +1,5 @@
 const idClientes = localStorage.getItem('idCliente'); 
-const API_URL = `http://localhost:8080/db/v1/thekingtiger/cliente/${idClientes}`;
+const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/cliente/${idClientes}`;
 let datosUsuario = null;
 
 // Cargar datos

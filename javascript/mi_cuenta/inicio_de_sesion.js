@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         try {
-            const responseAdmin = await fetch("http://localhost:8080/db/v1/thekingtiger/login-admin",{
+            const responseAdmin = await fetch("http://18.218.198.81:8080/db/v1/thekingtiger/login-admin",{
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (responseAdmin.status === 404){
-                const response = await fetch("http://localhost:8080/db/v1/thekingtiger/login", {
+                const response = await fetch("http://18.218.198.81:8080/db/v1/thekingtiger/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({

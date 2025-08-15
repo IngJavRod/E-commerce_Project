@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const contrasenaInput = passwordInput.value.trim();
 
         //End-Point del Back-end
-        const API_URL = `http://localhost:8080/db/v1/thekingtiger/agregar-admin`;
+        const API_URL = `http://18.218.198.81:8080/db/v1/thekingtiger/agregar-admin`;
 
 
         // Validación de campos vacíos
