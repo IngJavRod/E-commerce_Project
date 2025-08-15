@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const nomCliente = localStorage.setItem('nombreCliente', usuario.nomCliente);
                 window.location.href = "./mi_cuenta.html";
 
+            }else{
+                alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
+                window.location.href = '../formularioProducto.html';
+                return;
             }
 
             
@@ -72,9 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            alert("Hola ADMIN :) Inicio de sesión exitoso ✅");
-            window.location.href = '../formularioProducto.html';
-            return;
+            
 
             
         } catch (error) {

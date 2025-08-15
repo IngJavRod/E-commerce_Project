@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const contrasenaInput = passwordInput.value.trim();
 
         //End-Point del Back-end
-        const API_URL = `http://localhost:8080/db/v1/thekingtiger/agregar-cliente`;
+        const API_URL = `http://localhost:8080/db/v1/thekingtiger/agregar-admin`;
 
 
         // Validación de campos vacíos
@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Crear nuevo usuario
         const clientes = {
-            nomCliente: nombreInput,
-            correoCliente: correoInput,
-            passwordCliente: contrasenaInput
+            nomAdmin: nombreInput,
+            correoAdmin: correoInput,
+            passwordAdmin: contrasenaInput
         };
         try{
             const res = await fetch(API_URL, {
