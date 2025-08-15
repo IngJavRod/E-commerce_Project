@@ -85,7 +85,7 @@ function agregarEventos() {
             if (!confirm("¿Seguro que quieres eliminar este producto?")) return;
 
             try {
-                const res = await fetch(`http://localhost:8080/db/v1/thekingtiger/eliminar-producto/${id}`, { method: 'DELETE' });
+                const res = await fetch(`http://18.218.198.81:8080/db/v1/thekingtiger/eliminar-producto/${id}`, { method: 'DELETE' });
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
                 // No confiamos en lo que devuelva DELETE, recargamos lista

@@ -52,7 +52,7 @@ document.getElementById('form-editar').addEventListener('submit', (e) => {
         telefonoCliente: document.getElementById('telefono').value,
         direccionCliente: document.getElementById('direccion').value
     };
-    const API_URL2 = `http://localhost:8080/db/v1/thekingtiger/update-cliente/${idClientes}`;
+    const API_URL2 = `http://18.218.198.81:8080/db/v1/thekingtiger/update-cliente/${idClientes}`;
     fetch(API_URL2, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
