@@ -1,0 +1,25 @@
+.custom-btn {
+    flex: 1; /* Ambos botones se expanden igual */
+    font-size: 1.2rem; /* Texto más grande */
+    padding: 15px; /* Más alto */
+    border-radius: 10px; /* Bordes redondeados */
+    min-width: 150px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+    
+}
+
+.btnGestor{
+    text-decoration: none; 
+    color: black;
+}
+
+.btnGestor:hover{
+    text-decoration: none; 
+    color: white;
+}
