@@ -83,7 +83,7 @@ function createFooter() {
             <div class="footer-section">
                 <h4>General</h4>
                 <ul class="list-unstyled">
-                    <li><a href="/html/sobre_nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="/html/sobre_nosotros.html">Acerca de nosotros</a></li>
                     <li><a href="/html/contacto.html">Contáctanos</a></li>
                     <li><a href="/html/terminos_condiciones.html">Términos y condiciones</a></li>
                 </ul>
